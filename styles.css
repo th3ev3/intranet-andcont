@@ -15,7 +15,69 @@
             overflow: hidden; /* Remove a rolagem */
             position: relative;
         }
-        
+        .button6 {
+            position: absolute;
+            padding: 45px 40px;
+            background-color: #fff;
+            border-radius: 30px; /* Bordas mais arredondadas */
+            border: none;
+            font-size:1.8em;
+            color: #C4902A;
+            cursor: pointer;
+            font-weight: bold; /* Texto em negrito */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 
+                        inset 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adicionada sombra interna */
+            transition: 0.25s ease;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #C4902A;
+        }
+
+        .button5 {
+            position: absolute;
+            padding: 45px 55px;
+            background-color: #fff;
+            border-radius: 30px; /* Bordas mais arredondadas */
+            border: none;
+            font-size:1.8em;
+            color: #C4902A;
+            cursor: pointer;
+            font-weight: bold; /* Texto em negrito */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 
+                        inset 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adicionada sombra interna */
+            transition: 0.25s ease;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #C4902A;
+        }
+
+        .button5:hover {
+            box-shadow: 
+                0 5px 5px -5px rgba(33, 150, 243, 0.15),
+                0 10px 10px -5px rgba(33, 150, 243, 0.15),
+                0 15px 15px -5px rgba(33, 150, 243, 0.15),
+                0 20px 20px -5px rgba(33, 150, 243, 0.15),
+                inset 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra interna permanece ao hover */
+        }
+
+        /* Ajustando a posição exata dos botões */
+        #comunicados {
+            top: 34%;   /* Mais para baixo */
+            left: 3%;   /* Mais para a esquerda */
+            width: 15vw;
+        }
+
+        #calendario {
+            top: 49%;   /* Mais para baixo */
+            left: 3%;   /* Mais para a esquerda */
+            width: 15vw;
+        }
+
+        #links {
+            top: 65%;   /* Mais para baixo */
+            left: 3%;   /* Mais para a esquerda */
+            width: 15vw;
+        }
         .background-img {
             width: 100%;          /* Ocupe toda a largura */
             height: 100vh;        /* Ocupe toda a altura da viewport */
