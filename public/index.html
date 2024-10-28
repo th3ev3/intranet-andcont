@@ -6,6 +6,8 @@
     <title>Central de Comunicados AndCont</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
 </head>
 <body>
    
@@ -115,19 +117,57 @@
         <p id="resumo-conteudo">Aqui vai o resumo do comunicado selecionado.</p>
     </div>
 
-
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function(OneSignal) {
-        await OneSignal.init({
-          appId: "9e585ea7-1a5c-40b6-94b2-a023b57fd61c",
-          safari_web_id: "web.onesignal.auto.0e731bf1-0f8d-4c8c-8593-03e4c907000a",
-          notifyButton: {
-            enable: true,
-          },
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+          await OneSignal.init({
+            appId: "9e585ea7-1a5c-40b6-94b2-a023b57fd61c",
+            safari_web_id: "web.onesignal.auto.0e731bf1-0f8d-4c8c-8593-03e4c907000a",
+            notifyButton: {
+              enable: true, // Ativar o botão de notificação
+              size: 'medium', // Tamanho do botão: 'small', 'medium', ou 'large'
+              theme: 'default', // Tema: 'default' ou 'inverse'
+              position: 'bottom-right', // Posição: 'bottom-left' ou 'bottom-right'
+              offset: {
+                bottom: '20px', // Distância do fundo
+                right: '20px' // Distância da direita
+              },
+              showCredit: false, // Ocultar o logo do OneSignal
+              text: {
+                'tip.state.unsubscribed': 'Subscribe to notifications',
+                'tip.state.subscribed': "You're subscribed to notifications",
+                'tip.state.blocked': "You've blocked notifications",
+                'message.prenotify': 'Click to subscribe to notifications',
+                'message.action.subscribed': "Thanks for subscribing!",
+                'message.action.resubscribed': "You're subscribed to notifications",
+                'message.action.unsubscribed': "You won't receive notifications again",
+                'dialog.main.title': 'Manage Site Notifications',
+                'dialog.main.button.subscribe': 'SUBSCRIBE',
+                'dialog.main.button.unsubscribe': 'UNSUBSCRIBE',
+                'dialog.blocked.title': 'Unblock Notifications',
+                'dialog.blocked.message': "Follow these instructions to allow notifications:"
+              },
+              colors: {
+                'circle.background': 'rgb(0, 123, 255)', // Fundo do círculo do botão
+                'circle.foreground': 'white', // Cor do ícone no círculo
+                'badge.background': 'rgb(0, 123, 255)', // Fundo do badge
+                'badge.foreground': 'white', // Cor do texto do badge
+                'badge.bordercolor': 'white', // Cor da borda do badge
+                'pulse.color': 'white', // Cor do pulso quando clicado
+                'dialog.button.background.hovering': 'rgb(0, 104, 217)', // Cor do botão ao passar o mouse
+                'dialog.button.background.active': 'rgb(0, 86, 173)', // Cor do botão quando ativo
+                'dialog.button.background': 'rgb(0, 123, 255)', // Cor de fundo do botão
+                'dialog.button.foreground': 'white' // Cor do texto do botão
+              },
+              displayPredicate: function() {
+                return OneSignal.isPushNotificationsEnabled()
+                    .then(function(isPushEnabled) {
+                        return !isPushEnabled;
+                    });
+              }
+            }
+          });
         });
-      });
-    </script>
+      </script>
 </body>
 </html>
