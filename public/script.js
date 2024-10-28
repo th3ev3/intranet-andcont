@@ -55,12 +55,12 @@ function openOtherCard(cardId) {
 // Função para visualizar o resumo do comunicado com a imagem
 function verComunicado(comunicadoId, imgSrc) {
     const comunicados = {
-        'comunicado1': ' Pois é! Esse é um benefício que estendemos a todos os colaboradores e também à família de cada um de vocês! Aproveitem essa oportunidade de ouro para acessar uma série de serviços, como lazer, esporte, saúde, cultura e muito mais. ',
-        'comunicado2': '',
-        'comunicado3': '',
-        'comunicado4': '',
-        'comunicado5': '',
-        'comunicado6': '',
+        'comunicado1':'<br>Pois é! Esse é um benefício que estendemos a todos os colaboradores e também à família de cada um de vocês! <br><br>Aproveitem essa oportunidade de ouro para acessar uma série de serviços, como lazer, esporte, saúde, cultura e muito mais.',
+        'link': 'Acesse o nosso para realizar consultas e gerenciar as respostas de ID dos clientes. Este espaço foi projetado para oferecer informações exclusivas e facilitar a comunicação. Você encontrará recursos valiosos para atender às suas necessidades e garantir um atendimento de qualidade. <a href="https://exemplo.com/portal-cliente" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique aqui!</a> ',
+        'link1': 'Visite o nosso site oficial para conhecer mais sobre nossos serviços, missão e visão. Aqui, você encontrará informações detalhadas sobre tudo o que fazemos e como podemos ajudar nossos clientes. <a href="https://andcont.com.br/" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique Aqui</a>',
+        'link2': 'Fique conectado com a gente através das nossas redes sociais! Siga-nos para receber atualizações, novidades e interagir com a nossa comunidade. Compartilhamos conteúdos interessantes e dicas que podem ser úteis para você. <a href="https://linktr.ee/andcont?fbclid=PAZXh0bgNhZW0CMTEAAaYD0ClmjXWcn_nacSrC_VBcNUMj4d7tUANJVJ3idh9W_5OPtist8R6nTcY_aem_5_xKy14HuJri181auKuOZwcom.br/" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique Aqui</a>',
+        'link3': 'Acesse nosso Google Drive para visualizar e baixar documentos, apresentações e outros arquivos compartilhados. Este espaço é utilizado para facilitar o compartilhamento de informações entre a equipe e garantir que todos tenham acesso às últimas versões dos documentos importantes.  <a href="https://drive.google.com/drive/my-drive" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique Aqui</a>',
+        'link5': '',
         'comunicado7': '',
         'comunicado8': '',
         'comunicado9': '',
@@ -70,8 +70,8 @@ function verComunicado(comunicadoId, imgSrc) {
 
     const resumo = comunicados[comunicadoId] || 'Resumo não disponível no momento.';
     
-    // Exibe o resumo do comunicado
-    document.getElementById('resumo-conteudo').innerText = resumo;
+    // Exibe o resumo do comunicado com HTML (para permitir links clicáveis)
+    document.getElementById('resumo-conteudo').innerHTML = resumo;
 
     // Verifica se imgSrc é válido e exibe a imagem
     const comunicadoImagem = document.getElementById('comunicado-imagem');
