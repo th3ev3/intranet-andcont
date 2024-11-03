@@ -114,6 +114,18 @@ function goToComunicado() {
 setTimeout(showPopup,5);  // 3000 milissegundos = 3 segundos
 
 
+// Verifica se o navegador suporta notificações
+if ("Notification" in window) {
+    // Solicita permissão assim que o site é carregado
+    window.addEventListener('load', () => {
+        // Verifica se a permissão ainda não foi definida pelo usuário
+        if (Notification.permission === "default") { // "default" significa que o usuário ainda não escolheu
+            Notification.requestPermission();
+        }
+    });
+} else {
+    console.log("Este navegador não suporta notificações.");
+}
 
 
 
