@@ -111,4 +111,25 @@ function goToComunicado() {
 }
 
 // Exibir o popup após um pequeno atraso (ex: 3 segundos)
+<<<<<<< HEAD
 setTimeout(showPopup, 5); // 3000 milissegundos = 3 segundos
+=======
+setTimeout(showPopup,5);  // 3000 milissegundos = 3 segundos
+
+
+// Verifica se o navegador suporta notificações
+if ("Notification" in window) {
+    // Solicita permissão assim que o site é carregado
+    window.addEventListener('load', () => {
+        // Verifica se a permissão ainda não foi definida pelo usuário
+        if (Notification.permission === "default") { // "default" significa que o usuário ainda não escolheu
+            Notification.requestPermission();
+        }
+    });
+} else {
+    console.log("Este navegador não suporta notificações.");
+}
+
+
+
+>>>>>>> 040f0ad660b889a45bcbc9cc72b2eab7462214a0
