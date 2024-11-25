@@ -1,413 +1,431 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Reset básico */
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-
-      /* Estilos Gerais */
-      body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-size: cover; /* Faz a imagem se esticar para cobrir toda a tela */
-          background-color: #296c94; /* Cor de fundo caso a imagem não carregue */
-          height: 100vh; /* Garante que o body ocupe toda a altura da tela */
-          overflow: hidden; /* Remove a rolagem */
-          position: relative;
-      }
+/* Estilos Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background-color: #296c94;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
 
 
-      .button6{
-          position: absolute;
-          padding: 2vw 1vw; /* Espaçamento responsivo */
-          background-color: #fff;
-          border-radius: 30px; /* Bordas arredondadas */
-          border: none;
-          font-size: 1.5vw; /* Tamanho da fonte relativo à largura da tela */
-          color: #C4902A;
-          cursor: pointer;
-          font-weight: bold;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
-                      inset 0px 4px 6px rgba(0, 0, 0, 0.2); 
-          transition: 0.25s ease;
-          border-width: 2px;
-          border-style: solid;
-          border-color: #C4902A;
-          text-align: center; /* Centraliza o texto */
-          overflow: hidden; /* Impede que o texto saia para fora do botão */
-          white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-      }
-      .button5 {
-          position: absolute;
-          padding: 2vw 3vw; /* Espaçamento responsivo */
-          background-color: #fff;
-          border-radius: 30px; /* Bordas arredondadas */
-          border: none;
-          font-size: 1.5vw; /* Tamanho da fonte relativo à largura da tela */
-          color: #C4902A;
-          cursor: pointer;
-          font-weight: bold;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
-                      inset 0px 4px 6px rgba(0, 0, 0, 0.2); 
-          transition: 0.25s ease;
-          border-width: 2px;
-          border-style: solid;
-          border-color: #C4902A;
-          text-align: center; /* Centraliza o texto */
-          overflow: hidden; /* Impede que o texto saia para fora do botão */
-          white-space: nowrap; /* Evita que o texto quebre em várias linhas */
-      }
-      
-      .button5:hover, .button6:hover {
-          box-shadow: 
-              0 5px 5px -5px rgba(33, 150, 243, 0.15),
-              0 10px 10px -5px rgba(33, 150, 243, 0.15),
-              0 15px 15px -5px rgba(33, 150, 243, 0.15),
-              0 20px 20px -5px rgba(33, 150, 243, 0.15),
-              inset 0px 4px 6px rgba(0, 0, 0, 0.2);
-      }
-      
-      @media (max-width: 768px) {
-          .button5, .button6 {
-              padding: 3vw 4vw; /* Aumenta o padding em telas menores */
-              font-size: 1.3em; /* Ajusta o tamanho da fonte */
-          }
-      }
-      
-      @media (max-width: 480px) {
-          .button5, .button6 {
-              padding: 4vw 5vw; /* Ajusta ainda mais o padding */
-              font-size: 1em; /* Reduz ainda mais a fonte */
-          }
-      }
-      
-      /* Ajustando a posição e largura dos botões */
-      #comunicados {
-          top: 34%;
-          left: 3%;
-          width: 15vw;
-      }
-      
-      #calendario {
-          top: 49%;
-          left: 3%;
-          width: 15vw;
-      }
-      
-      #links {
-          top: 65%;
-          left: 3%;
-          width: 15vw;
-      }
-      
-      .background-img {
-          width: 100%;          /* Ocupe toda a largura */
-          height: 100vh;        /* Ocupe toda a altura da viewport */
-          object-fit: cover;    /* Mantém a proporção da imagem e cobre a tela */
-      }
-      img {
-          width: 100%;
-          height: auto;
-      }
-      .custom-alert {
-          display: none; /* Oculto por padrão */
-          position: fixed;
-          z-index: 1000222;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
-      }
-      
-      .custom-alert-content {
-          background-color: white;
-          padding: 20px;
-          margin: 15% auto;
-          width: 300px;
-          text-align: center;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      
-      .custom-alert-close {
-          color: red;
-          float: right;
-          font-size: 22px;
-          font-weight: bold;
-          cursor: pointer;
-      }
-      
-      .custom-alert-close:hover {
-          color: darkred;
-      }
-      
-      /* Overlay */
-      .overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.6);
-          display: none;
-          z-index: 1000;
-          transition: opacity 0.3s ease;
-      }
+.button6 {
+    position: absolute;
+    padding: 2vw 1vw;
+    background-color: #fff;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5vw;
+    color: #C4902A;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+        inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.25s ease;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #C4902A;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
-      /* Cards de Comunicados */
-      .card {
-          display: none;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%) scale(0.8);
-          background-color: #fff;
-          width: 80%;
-          max-width: 800px;
-          padding: 30px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-          border-radius: 12px;
-          z-index: 1001;
-          max-height: 90%;
-          overflow-y: auto;
-          transition: all 0.3s ease;
-      }
+.button5 {
+    position: absolute;
+    padding: 2vw 3vw;
+    background-color: #fff;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5vw;
+    color: #C4902A;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+        inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.25s ease;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #C4902A;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
-      .card.active {
-          display: block;
-          transform: translate(-50%, -50%) scale(1);
-      }
+.button5:hover,
+.button6:hover {
+    box-shadow:
+        0 5px 5px -5px rgba(33, 150, 243, 0.15),
+        0 10px 10px -5px rgba(33, 150, 243, 0.15),
+        0 15px 15px -5px rgba(33, 150, 243, 0.15),
+        0 20px 20px -5px rgba(33, 150, 243, 0.15),
+        inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-      /* Cabeçalho do Card */
-      .card header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-      }
+@media (max-width: 768px) {
 
-      .card header h2 {
-          font-size: 24px;
-          color: #296c94;
-          display: flex;
-          align-items: center;
-      }
+    .button5,
+    .button6 {
+        padding: 3vw 4vw;
+        font-size: 1.3em;
+    }
+}
 
-      .card header h2 .icon {
-          margin-right: 10px;
-          font-size: 28px;
-      }
+@media (max-width: 480px) {
 
-      .close-btn {
-          background: none;
-          border: none;
-          font-size: 24px;
-          cursor: pointer;
-          color: #555;
-          transition: color 0.2s ease;
-      }
+    .button5,
+    .button6 {
+        padding: 4vw 5vw;
+        font-size: 1em;
+    }
+}
 
-      .close-btn:hover {
-          color: #000;
-      }
+/* Ajustando a posição e largura dos botões */
+#comunicados {
+    top: 34%;
+    left: 3%;
+    width: 15vw;
+}
 
-      /* Conteúdo do Card */
-      .card p {
-          font-size: 16px;
-          color: #333;
-          line-height: 1.6;
-          margin-bottom: 20px;
-      }
+#calendario {
+    top: 49%;
+    left: 3%;
+    width: 15vw;
+}
 
-      /* Histórico de Comunicados */
-      .historico-section {
-          margin-bottom: 20px;
-      }
+#links {
+    top: 65%;
+    left: 3%;
+    width: 15vw;
+}
 
-      .historico-section h3 {
-          font-size: 20px;
-          color:#296c94;
-          margin-bottom: 10px;
-      }
+.background-img {
+    width: 100%;
+    /* Ocupe toda a largura */
+    height: 100vh;
+    /* Ocupe toda a altura da viewport */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e cobre a tela */
+}
 
-      .historico-section ul {
-          list-style: none;
-      }
+img {
+    width: 100%;
+    height: auto;
+}
 
-      .historico-section ul li {
-          background-color: #f0f4f8;
-          padding: 10px 15px;
-          border-radius: 8px;
-          margin-bottom: 8px;
-          transition: background-color 0.3s;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-      }
+.custom-alert {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000222;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro com transparência */
+}
 
-      .historico-section ul li:hover {
-          background-color: #dce6f1;
-      }
+.custom-alert-content {
+    background-color: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-      .historico-section ul li a {
-          text-decoration: none;
-          color: #296c94;
-          font-weight: 500;
-          flex: 1;
-      }
+.custom-alert-close {
+    color: red;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-      /* Navegação entre Cards */
-      .navigation {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          gap: 10px;
-      }
+.custom-alert-close:hover {
+    color: darkred;
+}
 
-      .navigation button {
-          background-color: #296c94;
-          color: white;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: background-color 0.3s, transform 0.3s;
-          flex: 1 1 45%;
-          min-width: 150px;
-      }
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
 
-      .navigation button:hover {
-          background-color:#1b5276;
-          transform: translateY(-2px);
-      }
+/* Cards de Comunicados */
+.card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    z-index: 1001;
+    max-height: 90%;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
 
-      /* Resumo do Comunicado */
-      #resumo-card {
-          width: 60%;
-          max-width: 600px;
-      }
+.card.active {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
 
-      /* Barra de Busca */
-      .search-container {
-          margin: 20px;
-          text-align: center;
-      }
+/* Cabeçalho do Card */
+.card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-      .search-container input {
-          width: 80%;
-          max-width: 400px;
-          padding: 10px 15px;
-          border: 2px solid #296c94;
-          border-radius: 25px;
-          font-size: 16px;
-          transition: border-color 0.3s;
-      }
+.card header h2 {
+    font-size: 24px;
+    color: #296c94;
+    display: flex;
+    align-items: center;
+}
 
-      .search-container input:focus {
-          outline: none;
-          border-color: #296c94;
-      }
+.card header h2 .icon {
+    margin-right: 10px;
+    font-size: 28px;
+}
 
-      /* Estilos da Barra de Rolagem para WebKit */
-      ::-webkit-scrollbar {
-          width: 10px;
-      }
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+}
 
-      ::-webkit-scrollbar-thumb {
-          background-color: #296c94;
-          border-radius: 10px;
-      }
+.close-btn:hover {
+    color: #000;
+}
 
-  
+/* Conteúdo do Card */
+.card p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-      ::-webkit-scrollbar-track {
-          background: #f1f1f1;
-          border-radius: 10px;
-      }
+/* Histórico de Comunicados */
+.historico-section {
+    margin-bottom: 20px;
+}
 
-      /* Responsividade */
-      @media (max-width: 768px) {
-          .card {
-              width: 90%;
-              padding: 20px;
-          }
+.historico-section h3 {
+    font-size: 20px;
+    color: #296c94;
+    margin-bottom: 10px;
+}
 
-          .navigation button {
-              flex: 1 1 100%;
-          }
+.historico-section ul {
+    list-style: none;
+}
 
-          .search-container input {
-              width: 90%;
-          }
-      }
- 
+.historico-section ul li {
+    background-color: #f0f4f8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.historico-section ul li:hover {
+    background-color: #dce6f1;
+}
+
+.historico-section ul li a {
+    text-decoration: none;
+    color: #296c94;
+    font-weight: 500;
+    flex: 1;
+}
+
+/* Navegação entre Cards */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation button {
+    background-color: #296c94;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 45%;
+    min-width: 150px;
+}
+
+.navigation button:hover {
+    background-color: #1b5276;
+    transform: translateY(-2px);
+}
+
+/* Resumo do Comunicado */
+#resumo-card {
+    width: 60%;
+    max-width: 600px;
+}
+
+/* Barra de Busca */
+.search-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.search-container input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 2px solid #296c94;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #296c94;
+}
+
+/* Estilos da Barra de Rolagem para WebKit */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #296c94;
+    border-radius: 10px;
+}
 
 
 
-      /* Estilos do popup */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navigation button {
+        flex: 1 1 100%;
+    }
+
+    .search-container input {
+        width: 90%;
+    }
+}
+
+
+
+
+/* Estilos do popup */
 /* Estilos do popup */
 /* Estilos do popup */
 .popup {
-  display: none; /* Oculto por padrão */
-  position: fixed;
-  z-index: 1003;
-  top: 20px; /* Espaçamento do topo */
-  left: 20px; /* Alinhado à esquerda com o mesmo espaçamento da borda */
-  background-color: white;
-  width: 300px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  text-align: center;
-  animation: pulsate 1s infinite;
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 1003;
+    top: 20px;
+    /* Espaçamento do topo */
+    left: 20px;
+    /* Alinhado à esquerda com o mesmo espaçamento da borda */
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    animation: pulsate 1s infinite;
 }
 
 .popup-content {
-  position: relative;
+    position: relative;
 }
 
 .popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: #555;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
 }
 
 .popup-btn {
-  background-color: #296c94;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
+    background-color: #296c94;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* Efeito de pulsação */
 @keyframes pulsate {
-  0% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.05);
-  }
-  100% {
-      transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Estilo personalizado para o popup */
 .popup-custom {
-  background-color: #f0f0f0; /* Personalize a cor de fundo */
-  color: #333; /* Cor do texto */
-  border: 2px solid #ccc; /* Borda personalizável */
-  font-family: Arial, sans-serif; /* Tipografia personalizável */
-  padding: 25px;
+    background-color: #f0f0f0;
+    /* Personalize a cor de fundo */
+    color: #333;
+    /* Cor do texto */
+    border: 2px solid #ccc;
+    /* Borda personalizável */
+    font-family: Arial, sans-serif;
+    /* Tipografia personalizável */
+    padding: 25px;
 }
-
-
-

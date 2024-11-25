@@ -10,13 +10,13 @@ function closeCustomAlert() {
 }
 
 // Bloquear o menu de contexto (clique direito)
-document.addEventListener('contextmenu', function(e) {
+document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
     showCustomAlert("Proibido tentar salvar qualquer conteúdo");
 });
 
 // Bloquear atalhos de teclado para salvar, copiar, imprimir ou ver código-fonte
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.ctrlKey || e.metaKey) {
         if (e.key === 's' || e.key === 'p' || e.key === 'c' || e.key === 'u') {
             e.preventDefault(); // Bloquear Ctrl+S, Ctrl+P, Ctrl+C, Ctrl+U
@@ -26,7 +26,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Bloquear a função de arrastar imagens (para impedir arrastar e salvar)
-document.addEventListener('dragstart', function(e) {
+document.addEventListener('dragstart', function (e) {
     e.preventDefault();
     showCustomAlert("Arrastar e salvar conteúdo foi desativado.");
 });
@@ -55,7 +55,7 @@ function openOtherCard(cardId) {
 // Função para visualizar o resumo do comunicado com a imagem
 function verComunicado(comunicadoId, imgSrc) {
     const comunicados = {
-        'comunicado1':'<br>Pois é! Esse é um benefício que estendemos a todos os colaboradores e também à família de cada um de vocês! <br><br>Aproveitem essa oportunidade de ouro para acessar uma série de serviços, como lazer, esporte, saúde, cultura e muito mais.',
+        'comunicado1': '<br>Pois é! Esse é um benefício que estendemos a todos os colaboradores e também à família de cada um de vocês! <br><br>Aproveitem essa oportunidade de ouro para acessar uma série de serviços, como lazer, esporte, saúde, cultura e muito mais.',
         'link': 'Acesse o nosso para realizar consultas e gerenciar as respostas de ID dos clientes. Este espaço foi projetado para oferecer informações exclusivas e facilitar a comunicação. <br><br>Você encontrará recursos valiosos para atender às suas necessidades e garantir um atendimento de qualidade.<br> <br> <a href="https://exemplo.com/portal-cliente" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique aqui!</a> ',
         'link1': 'Visite o nosso site oficial para conhecer mais sobre nossos serviços, missão e visão.<br><br> Aqui, você encontrará informações detalhadas sobre tudo o que fazemos e como podemos ajudar nossos clientes.<br> <br> <a href="https://andcont.com.br/" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique Aqui</a>',
         'link2': 'Fique conectado com a gente através das nossas redes sociais! Siga-nos para receber atualizações, novidades e interagir com a nossa comunidade. <br>Compartilhamos conteúdos interessantes e dicas que podem ser úteis para você. <br> <br><a href="https://linktr.ee/andcont?fbclid=PAZXh0bgNhZW0CMTEAAaYD0ClmjXWcn_nacSrC_VBcNUMj4d7tUANJVJ3idh9W_5OPtist8R6nTcY_aem_5_xKy14HuJri181auKuOZwcom.br/" target="_blank" style="color: goldenrod;  text-decoration: none;">Clique Aqui</a>',
@@ -65,11 +65,11 @@ function verComunicado(comunicadoId, imgSrc) {
         'comunicado8': '',
         'comunicado9': '',
         'comunicado10': '',
-        'comunicado11':'teste'
+        'comunicado11': 'teste'
     };
 
     const resumo = comunicados[comunicadoId] || 'Resumo não disponível no momento.';
-    
+
     // Exibe o resumo do comunicado com HTML (para permitir links clicáveis)
     document.getElementById('resumo-conteudo').innerHTML = resumo;
 
@@ -77,9 +77,9 @@ function verComunicado(comunicadoId, imgSrc) {
     const comunicadoImagem = document.getElementById('comunicado-imagem');
     if (imgSrc) {
         comunicadoImagem.src = imgSrc;
-        comunicadoImagem.style.display = 'block';  // Exibe a imagem
+        comunicadoImagem.style.display = 'block'; // Exibe a imagem
     } else {
-        comunicadoImagem.style.display = 'none';   // Oculta a imagem se não houver
+        comunicadoImagem.style.display = 'none'; // Oculta a imagem se não houver
     }
 
     openCard('resumo-card');
@@ -106,14 +106,9 @@ function closePopup() {
 
 // Função para redirecionar ao comunicado
 function goToComunicado() {
-    closePopup();  // Fechar o popup
-    window.location.href = '#comunicado';  // Alterar para o link ou âncora correta
+    closePopup(); // Fechar o popup
+    window.location.href = '#comunicado'; // Alterar para o link ou âncora correta
 }
 
 // Exibir o popup após um pequeno atraso (ex: 3 segundos)
-setTimeout(showPopup,5);  // 3000 milissegundos = 3 segundos
-
-
-
-
-
+setTimeout(showPopup, 5); // 3000 milissegundos = 3 segundos
