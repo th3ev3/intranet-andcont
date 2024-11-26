@@ -111,9 +111,6 @@ function goToComunicado() {
 }
 
 // Exibir o popup após um pequeno atraso (ex: 3 segundos)
-<<<<<<< HEAD
-setTimeout(showPopup, 5); // 3000 milissegundos = 3 segundos
-=======
 setTimeout(showPopup,5);  // 3000 milissegundos = 3 segundos
 
 
@@ -132,4 +129,3 @@ if ("Notification" in window) {
 
 
 
->>>>>>> 040f0ad660b889a45bcbc9cc72b2eab7462214a0

@@ -201,7 +201,7 @@ img {
 
 .card header h2 {
     font-size: 24px;
-    color: #296c94;
+    color: #C4902A;
     display: flex;
     align-items: center;
 }
@@ -239,7 +239,7 @@ img {
 
 .historico-section h3 {
     font-size: 20px;
-    color: #296c94;
+    color: #C4902A;
     margin-bottom: 10px;
 }
 
@@ -264,7 +264,7 @@ img {
 
 .historico-section ul li a {
     text-decoration: none;
-    color: #296c94;
+    color: #C4902A;
     font-weight: 500;
     flex: 1;
 }
@@ -278,7 +278,7 @@ img {
 }
 
 .navigation button {
-    background-color: #296c94;
+    background-color: #C4902A;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -290,7 +290,7 @@ img {
 }
 
 .navigation button:hover {
-    background-color: #1b5276;
+    background-color: #C4902A;
     transform: translateY(-2px);
 }
 
@@ -310,7 +310,7 @@ img {
     width: 80%;
     max-width: 400px;
     padding: 10px 15px;
-    border: 2px solid #296c94;
+    border: 2px solid #C4902A;
     border-radius: 25px;
     font-size: 16px;
     transition: border-color 0.3s;
@@ -318,7 +318,7 @@ img {
 
 .search-container input:focus {
     outline: none;
-    border-color: #296c94;
+    border-color: #C4902A;
 }
 
 /* Estilos da Barra de Rolagem para WebKit */
@@ -327,7 +327,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #296c94;
+    background-color: #C4902A;
     border-radius: 10px;
 }
 
@@ -355,11 +355,6 @@ img {
 }
 
 
-
-
-/* Estilos do popup */
-/* Estilos do popup */
-/* Estilos do popup */
 .popup {
     display: none;
     /* Oculto por padrão */
@@ -392,7 +387,7 @@ img {
 }
 
 .popup-btn {
-    background-color: #296c94;
+    background-color: #C4902A;
     color: white;
     border: none;
     padding: 10px 20px;
