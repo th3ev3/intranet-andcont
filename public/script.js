@@ -1,3 +1,60 @@
+const snowContainer = document.getElementById("snow-container");
+const snowContent = ['&#10052', '&#10053', '&#10054']
+
+const random = (num) => {
+  return Math.floor(Math.random() * num);
+}
+
+const getRandomStyles = () => {
+  const top = random(100);
+  const left = random(100);
+  const dur = random(10) + 10;
+  const size = random(25) + 25;
+  return `
+    top: -${top}%;
+    left: ${left}%;
+    font-size: ${size}px;
+    animation-duration: ${dur}s;
+  `;
+}
+
+const createSnow = (num) => {
+  for (var i = num; i > 0; i--) {
+    var snow = document.createElement("div");
+    snow.className = "snow";
+    snow.style.cssText = getRandomStyles();
+    snow.innerHTML = snowContent[random(3)]
+    snowContainer.append(snow);
+  }
+}
+
+const removeSnow = () => {
+  snowContainer.style.opacity = "0";
+  setTimeout(() => {
+    snowContainer.remove()
+  }, 500)
+}
+
+window.addEventListener("load", () => {
+  createSnow(30)
+  setTimeout(removeSnow, (1000 * 60))
+});
+
+window.addEventListener("click", () => {
+  removeSnow()
+});
+
+window.addEventListener('load', function() {
+    var audio = document.getElementById('natalSong');
+    // Tenta iniciar o áudio sem interação
+    audio.play().catch(function() {
+        // Em caso de bloqueio, tenta após uma interação do usuário
+        document.addEventListener('click', function() {
+            audio.play();
+        }, { once: true });
+    });
+});
+
 // Função para exibir o alerta personalizado
 function showCustomAlert(message) {
     document.querySelector('.custom-alert-content p').innerText = message;
@@ -111,8 +168,7 @@ function goToComunicado() {
 }
 
 // Exibir o popup após um pequeno atraso (ex: 3 segundos)
-setTimeout(showPopup,5);  // 3000 milissegundos = 3 segundos
-
+setTimeout(showPopup, 5); // 3000 milissegundos = 3 segundos
 
 // Verifica se o navegador suporta notificações
 if ("Notification" in window) {
@@ -126,6 +182,3 @@ if ("Notification" in window) {
 } else {
     console.log("Este navegador não suporta notificações.");
 }
-
-
-
