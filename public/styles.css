@@ -69,11 +69,11 @@ body {
 .button5:hover,
 .button6:hover {
   box-shadow:
-    0 5px 5px -5px rgba(33, 150, 243, 0.15),
-    0 10px 10px -5px rgba(33, 150, 243, 0.15),
-    0 15px 15px -5px rgba(33, 150, 243, 0.15),
-    0 20px 20px -5px rgba(33, 150, 243, 0.15),
-    inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+  0 5px 5px -5px rgba(255, 215, 0, 0.15),
+  0 10px 10px -5px rgba(255, 215, 0, 0.15),
+  0 15px 15px -5px rgba(255, 215, 0, 0.15),
+  0 20px 20px -5px rgba(255, 215, 0, 0.15),
+  inset 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
