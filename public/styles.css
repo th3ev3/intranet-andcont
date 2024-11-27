@@ -79,19 +79,19 @@ body {
 
 
 #comunicados {
-  top: 34%;
+  top: 35%;
   left: 3%;
   width: 15vw;
 }
 
 #calendario {
-  top: 49%;
+  top: 50%;
   left: 3%;
   width: 15vw;
 }
 
 #links {
-  top: 65%;
+  top: 66%;
   left: 3%;
   width: 15vw;
 }
@@ -392,7 +392,7 @@ img {
 /* Container da árvore de natal */
 .tree {
   position: absolute;
-  top: 27vh;
+  top: 19vh;
   left: 84vw;
   transform: translate(-50%, -50%);
   max-width: 20vw;
