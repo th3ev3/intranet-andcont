@@ -225,7 +225,7 @@ img {
 }
 
 .historico-section h3 {
-  font-size: 22px;
+  font-size: 15px;
   color: #921d1d;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -247,7 +247,7 @@ img {
 }
 
 .historico-section ul li:hover {
-  background-color: #d9e7f3;
+  background-color: #081d2f;
   transform: scale(1.02);
 }
 
