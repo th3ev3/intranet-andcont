@@ -389,11 +389,10 @@ img {
 
 
 
-/* Container da árvore de natal */
 .tree {
   position: absolute;
-  top: 19vh;
-  left: 84vw;
+  top: 135px; /* Valor fixo em pixels */
+  left: 84%; /* Ainda pode ser responsivo na horizontal */
   transform: translate(-50%, -50%);
   max-width: 20vw;
 }
