@@ -398,7 +398,7 @@ img {
 
 .tree {
   position: absolute;
-  top: 135px; /* Valor fixo em pixels */
+  top:25vh; /* Valor fixo em pixels */
   left: 84%; /* Ainda pode ser responsivo na horizontal */
   transform: translate(-50%, -50%);
   max-width: 20vw;
