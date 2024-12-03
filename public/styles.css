@@ -394,15 +394,17 @@ img {
   padding: 25px;
 }
 
-/* começa a arvore e floco de neve*/
+
 
 .tree {
   position: absolute;
-  top:25vh; /* Valor fixo em pixels */
-  left: 84%; /* Ainda pode ser responsivo na horizontal */
+  top: 15%; /* Proporcional ao contêiner pai */
+  left: 84%;
   transform: translate(-50%, -50%);
   max-width: 20vw;
 }
+
+
 
 /* Posicionamento das caixas */
 .boxes {
