@@ -2,15 +2,15 @@ const snowContainer = document.getElementById("snow-container");
 const snowContent = ['&#10052', '&#10053', '&#10054']
 
 const random = (num) => {
-  return Math.floor(Math.random() * num);
+    return Math.floor(Math.random() * num);
 }
 
 const getRandomStyles = () => {
-  const top = random(100);
-  const left = random(100);
-  const dur = random(10) + 10;
-  const size = random(25) + 25;
-  return `
+    const top = random(100);
+    const left = random(100);
+    const dur = random(10) + 10;
+    const size = random(25) + 25;
+    return `
     top: -${top}%;
     left: ${left}%;
     font-size: ${size}px;
@@ -19,39 +19,41 @@ const getRandomStyles = () => {
 }
 
 const createSnow = (num) => {
-  for (var i = num; i > 0; i--) {
-    var snow = document.createElement("div");
-    snow.className = "snow";
-    snow.style.cssText = getRandomStyles();
-    snow.innerHTML = snowContent[random(3)]
-    snowContainer.append(snow);
-  }
+    for (var i = num; i > 0; i--) {
+        var snow = document.createElement("div");
+        snow.className = "snow";
+        snow.style.cssText = getRandomStyles();
+        snow.innerHTML = snowContent[random(3)]
+        snowContainer.append(snow);
+    }
 }
 
 const removeSnow = () => {
-  snowContainer.style.opacity = "0";
-  setTimeout(() => {
-    snowContainer.remove()
-  }, 500)
+    snowContainer.style.opacity = "0";
+    setTimeout(() => {
+        snowContainer.remove()
+    }, 500)
 }
 
 window.addEventListener("load", () => {
-  createSnow(30)
-  setTimeout(removeSnow, (1000 * 60))
+    createSnow(30)
+    setTimeout(removeSnow, (1000 * 60))
 });
 
 window.addEventListener("click", () => {
-  removeSnow()
+    removeSnow()
 });
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     var audio = document.getElementById('natalSong');
     // Tenta iniciar o áudio sem interação
-    audio.play().catch(function() {
+    audio.play().catch(function () {
         // Em caso de bloqueio, tenta após uma interação do usuário
-        document.addEventListener('click', function() {
+        document.addEventListener('click', function () {
             audio.play();
-        }, { once: true });
+        }, {
+            once: true
+        });
     });
 });
 
@@ -124,7 +126,7 @@ function verComunicado(comunicadoId, imgSrc) {
         'comunicado4': '<p><strong>Bem-vindo à Intranet AndConters!</strong><br>Este é o seu portal de comunicação com a AndCont. Aqui você encontrará informações importantes para se manter conectado com a empresa:<br><br><strong>Comunicados</strong>: Fique por dentro das novidades e mensagens oficiais da AndCont.<br><strong>Calendário</strong>: Descubra os eventos e atividades programados para cada data.<br><strong>Links úteis</strong>: Acesse ferramentas e recursos essenciais para o seu trabalho.<br><br>Aproveite este espaço para estar sempre atualizado e bem informado sobre o que acontece na AndCont!</p>',
         'comunicado5': 'Oi, Time! 🎨<br><br> <strong>Segue nosso calendário de fim de ano:<br> </strong> <br> <strong>Home Office:</strong> a partir do dia 20/12/2024 (sexta-feira)<br> <br> <strong>Retorno presencial:</strong> 06/01/2025 (segunda-feira) <br><br> <strong>Folgas especiais:</strong> <br> 24/12 (terça-feira) <br> 31/12 (terça-feira) <br><br> <strong>Feriados:</strong> <br> 25/12 (quarta-feira) – Natal 🎄 <br> 01/01/2025 (quarta-feira) – Ano Novo 🎆 <br><br> Esse planejamento foi feito para nos proporcionar um bom descanso e celebrações ao lado de nossas famílias! Esperamos que recarreguem suas energias para um 2025 ainda mais próspero e cheio de bons momentos. <br> <br>Aproveitem as festas com muito amor e alegria!',
         'calendario4': '<strong>Home Office:</strong> a partir do dia 20/12/2024 (sexta-feira) <br>',
-        'calendario5':'<strong>Retorno presencial:</strong> 06/01/2025 (segunda-feira) <br>',
+        'calendario5': '<strong>Retorno presencial:</strong> 06/01/2025 (segunda-feira) <br>',
     };
 
     const resumo = comunicados[comunicadoId] || 'Resumo não disponível no momento.';
