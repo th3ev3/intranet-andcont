@@ -15,7 +15,7 @@
 
 <body>
   <audio id="natalSong" loop>
-    <source src="natal_song.mp3" type="audio/mpeg">
+    <source src="music_theme_natal.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <div class="snowflakes" aria-hidden="true">
@@ -77,7 +77,7 @@
   <button class="button6" id="comunicados" onclick="openCard('comunicados-card')">COMUNICADOS</button>
   <button class="button5" id="calendario" onclick="openCard('calendario-card')">CALENDÁRIO</button>
   <button class="button5" id="links" onclick="openCard('links-card')">LINKS</button>
-  <!--<div id="popup-novo-comunicado" class="popup">
+  <div id="popup-novo-comunicado" class="popup">
     <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
       <p style="font-size: 15px" ;>📢 Novo Comunicado disponível! Clique no botão abaixo.</p>
@@ -99,16 +99,12 @@
     <div class="historico-section" style="font-size: 16px;">
       <h3>Histórico de Comunicados </h3>
       <ul id="comunicados-list">
+        <li class="new" onclick="verComunicado('comunicado6','imagens/fotocapa.jpg')"><a href="javascript:void(0)">  Fotos da Confraternização - 18/12/2024</a></li>
 
         <!--  <li onclick="verComunicado('comunicado3', 'imagens/intranet25.png'')"><a href="javascript:void(0)">🔔 TIC - 06/12/2024</a></li>-->
-        <li class="news" onclick="verComunicado('comunicado5','')"><a href="javascript:void(0)">  Fim de Ano AndCont -
-            09/12/2024</a></li>
-        <li class="news" onclick="verComunicado('comunicado4', '')"><a href="javascript:void(0)">  Bem vindos a
-            Intranet - 09/12/2024</a></li>
-        <li onclick="verComunicado('comunicado2', '')"><a href="javascript:void(0)"> Convite Festa AndCont -
-            06/12/2024</a></li>
-
-
+        <li class="news" onclick="verComunicado('comunicado5','')"><a href="javascript:void(0)">  Fim de Ano AndCont - 09/12/2024</a></li>
+        <li class="news" onclick="verComunicado('comunicado4', '')"><a href="javascript:void(0)">  Bem vindos a Intranet - 09/12/2024</a></li>
+        <li onclick="verComunicado('comunicado2', '')"><a href="javascript:void(0)"> Convite Festa AndCont -06/12/2024</a></li>
       </ul>
     </div>
 
@@ -129,6 +125,7 @@
     <div class="historico-section" style="font-size: 16px">
       <h3>Histórico de Links</h3>
       <ul id="links-list">
+        <li class="new" onclick="verComunicado('link5','')"><a href="javascript:void(0)">Fotos Confraternização 2024 - 18/12/2024</a></li>
         <li onclick="verComunicado('link','')"><a href="javascript:void(0)">Portal - 23/10/2024</a></li>
         <li onclick="verComunicado('link1','')"><a href="javascript:void(0)">Nosso Site - 23/10/2024 </a></li>
         <li onclick="verComunicado('link2','')"><a href="javascript:void(0)">Nossas Redes Sociais - 23/10/2024</a></li>
