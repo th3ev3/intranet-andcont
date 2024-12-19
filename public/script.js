@@ -129,6 +129,7 @@ function verComunicado(comunicadoId, imgSrc) {
         'calendario5': '<strong>Retorno presencial:</strong> 06/01/2025 (segunda-feira) <br>',
         'comunicado6': '<br><strong>📸 Fotos da Confraternização Disponíveis!</strong><br> <br>Olá, Time AndCont!<br> As fotos incríveis da nossa confraternização já estão disponíveis para que todos possam relembrar esses momentos especiais! 💜<br> Aproveite para salvar as fotos que mais gostarem e, ao compartilhar em suas redes sociais, não esqueçam de marcar o nosso Instagram: <strong>@andcont.oficial</strong>. <br><br><a href="https://drive.google.com/drive/folders/1p8k-qIgGrxRkNL8lO4hH1JkwjY5CNYL4?usp=drive_link" target="_blank" style="color: goldenrod; text-decoration: none;">Clique aqui</a>',
         'link5': '<strong>📸 Fotos da Confraternização Disponíveis!</strong><br> Acesse as fotos no link: <a href="https://drive.google.com/drive/folders/1p8k-qIgGrxRkNL8lO4hH1JkwjY5CNYL4?usp=drive_link" target="_blank" style="color: goldenrod; text-decoration: none;">Clique Aqui!</a>.',
+        'calendario6':'<br>Está na hora do <strong>último brunch de 2024</strong> da AndCont, um momento para <strong>parar o trabalho</strong>,reunir o time e celebrar juntos na <strong>sala de reunião</strong>, onde <strong>tudo está pronto</strong>!',
     };
 
     const resumo = comunicados[comunicadoId] || 'Resumo não disponível no momento.';

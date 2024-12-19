@@ -81,7 +81,7 @@
     <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
       <p style="font-size: 15px" ;>📢 Novo Comunicado disponível! Clique no botão abaixo.</p>
-      <button onclick="openCard('comunicados-card')" class="popup-btn">Ver Comunicado</button>
+      <button onclick="openCard('calendario-card')" class="popup-btn">Ver Calendário</button>
     </div>
   </div>
 
@@ -99,7 +99,7 @@
     <div class="historico-section" style="font-size: 16px;">
       <h3>Histórico de Comunicados </h3>
       <ul id="comunicados-list">
-        <li class="new" onclick="verComunicado('comunicado6','imagens/fotocapa.jpg')"><a href="javascript:void(0)">  Fotos da Confraternização - 18/12/2024</a></li>
+        <li onclick="verComunicado('comunicado6','imagens/fotocapa.jpg')"><a href="javascript:void(0)">  Fotos da Confraternização - 18/12/2024</a></li>
 
         <!--  <li onclick="verComunicado('comunicado3', 'imagens/intranet25.png'')"><a href="javascript:void(0)">🔔 TIC - 06/12/2024</a></li>-->
         <li class="news" onclick="verComunicado('comunicado5','')"><a href="javascript:void(0)">  Fim de Ano AndCont - 09/12/2024</a></li>
@@ -125,7 +125,7 @@
     <div class="historico-section" style="font-size: 16px">
       <h3>Histórico de Links</h3>
       <ul id="links-list">
-        <li class="new" onclick="verComunicado('link5','')"><a href="javascript:void(0)">Fotos Confraternização 2024 - 18/12/2024</a></li>
+        <li onclick="verComunicado('link5','')"><a href="javascript:void(0)">Fotos Confraternização 2024 - 18/12/2024</a></li>
         <li onclick="verComunicado('link','')"><a href="javascript:void(0)">Portal - 23/10/2024</a></li>
         <li onclick="verComunicado('link1','')"><a href="javascript:void(0)">Nosso Site - 23/10/2024 </a></li>
         <li onclick="verComunicado('link2','')"><a href="javascript:void(0)">Nossas Redes Sociais - 23/10/2024</a></li>
@@ -155,6 +155,7 @@
     <div class="historico-section" style="font-size: 16px">
       <h3>Histórico de Eventos</h3>
       <ul id="calendario-list">
+        <li class='new'onclick="verComunicado('calendario6','imagens/natal3.png')"><a href="javascript:void(0)"> Brunch AndCont  - 19/12/2024</a>
         <li onclick="verComunicado('calendario5','')"><a href="javascript:void(0)"> Retorno presencial - 09/12/2024</a>
         </li>
         <li onclick="verComunicado('calendario4','')"><a href="javascript:void(0)"> Home Office AndCont - 09/12/2024</a>
