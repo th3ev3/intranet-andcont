@@ -6,7 +6,6 @@
   box-sizing: inherit;
 }
 
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -69,11 +68,11 @@ body {
 .button5:hover,
 .button6:hover {
   box-shadow:
-  0 5px 5px -5px rgba(26, 67, 121, 0.15),
-  0 10px 10px -5px rgba(26, 67, 121, 0.15),
-  0 15px 15px -5px rgba(26, 67, 121, 0.15),
-  0 20px 20px -5px rgba(26, 67, 121, 0.15),
-  inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+    0 5px 5px -5px rgba(26, 67, 121, 0.15),
+    0 10px 10px -5px rgba(26, 67, 121, 0.15),
+    0 15px 15px -5px rgba(26, 67, 121, 0.15),
+    0 20px 20px -5px rgba(26, 67, 121, 0.15),
+    inset 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -344,7 +343,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(145deg,#162c49, #1a4379);
+  background: linear-gradient(145deg, #162c49, #1a4379);
   border-radius: 6px;
 }
 
@@ -352,8 +351,6 @@ img {
   background: #f1f1f1;
   border-radius: 6px;
 }
-
-
 
 
 .popup {
@@ -417,10 +414,12 @@ img {
   font-family: Arial, sans-serif;
   padding: 25px;
 }
+
 .button-patch {
   position: fixed;
   bottom: 10px;
-  right: 10px; /* Ajuste o alinhamento horizontal conforme necessário */
+  right: 10px;
+  /* Ajuste o alinhamento horizontal conforme necessário */
   padding: 10px 20px;
   background-color: #C4902A;
   color: white;
