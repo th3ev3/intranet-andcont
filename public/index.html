@@ -25,13 +25,13 @@
   <button class="button6" id="comunicados" onclick="openCard('comunicados-card')">COMUNICADOS</button>
   <button class="button5" id="calendario" onclick="openCard('calendario-card')">CALENDÁRIO</button>
   <button class="button5" id="links" onclick="openCard('links-card')">LINKS</button>
-  <div id="popup-novo-comunicado" class="popup">
-    <div class="popup-content">
+ <!--  <div id="popup-novo-comunicado" class="popup">
+   <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
       <p style="font-size: 15px" ;>📢 Novo postagem disponível!    <br>Clique no botão abaixo.</p>
       <button onclick="openCard('links-card')" class="popup-btn">Ver Links</button>
     </div>
-  </div>
+  </div>-->
 
   <div class="overlay" id="overlay" onclick="closeCard()"></div>--!>
 
@@ -45,6 +45,7 @@
     <div class="historico-section" style="font-size: 16px;">
       <h3>Histórico de Comunicados </h3>
       <ul id="comunicados-list">
+        <li onclick="verComunicado('link7','')"><a href="javascript:void(0)">Tutorial Ligações  - 16/01/2025</a></li>
         <li class="news" onclick="verComunicado('comunicado9','imagens/ferias.gif')"><a href="javascript:void(0)">
             Programação de Férias 2025 - 14/01/2025</a></li>
         <li class="news" onclick="verComunicado('comunicado7','imagens/t.png')"><a href="javascript:void(0)"> Bem-vinda
@@ -77,7 +78,6 @@
       <h3>Histórico de Links</h3>
       <ul id="links-list">
        
-        <li  class="new" onclick="verComunicado('link7','')"><a href="javascript:void(0)">Tutorial Ligações  - 16/01/2025</a></li>
         <li onclick="verComunicado('link6','')"><a href="javascript:void(0)">Cursos - 06/01/2025</a></li>
         <li onclick="verComunicado('link5','')"><a href="javascript:void(0)">Fotos Confraternização 2024 -
             18/12/2024</a></li>
