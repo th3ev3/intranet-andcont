@@ -46,9 +46,7 @@ window.addEventListener("click", () => {
 
 window.addEventListener('load', function () {
     var audio = document.getElementById('sambaSong');
-    // Tenta iniciar o áudio sem interação
     audio.play().catch(function () {
-        // Em caso de bloqueio, tenta após uma interação do usuário
         document.addEventListener('click', function () {
             audio.play();
         }, {
@@ -57,61 +55,55 @@ window.addEventListener('load', function () {
     });
 });
 
-// Função para exibir o alerta personalizado
 function showCustomAlert(message) {
     document.querySelector('.custom-alert-content p').innerText = message;
     document.getElementById('custom-alert').style.display = 'block';
 }
 
-// Função para fechar o alerta personalizado
 function closeCustomAlert() {
     document.getElementById('custom-alert').style.display = 'none';
 }
 
-// Bloquear o menu de contexto (clique direito)
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
     showCustomAlert("Proibido tentar salvar qualquer conteúdo");
 });
 
-// Bloquear atalhos de teclado para salvar, copiar, imprimir ou ver código-fonte
 document.addEventListener('keydown', function (e) {
     if (e.ctrlKey || e.metaKey) {
         if (e.key === 's' || e.key === 'p' || e.key === 'c' || e.key === 'u') {
-            e.preventDefault(); // Bloquear Ctrl+S, Ctrl+P, Ctrl+C, Ctrl+U
+            e.preventDefault(); 
             showCustomAlert("Esta ação foi desativada.");
         }
     }
 });
 
-// Bloquear a função de arrastar imagens (para impedir arrastar e salvar)
 document.addEventListener('dragstart', function (e) {
     e.preventDefault();
     showCustomAlert("Arrastar e salvar conteúdo foi desativado.");
 });
 
-// Função para abrir um card específico
 function openCard(cardId) {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById(cardId).classList.add('active');
 }
 
-// Função para fechar todos os cards
+
 function closeCard() {
     document.getElementById('overlay').style.display = 'none';
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => card.classList.remove('active'));
 }
 
-// Função para abrir outro card a partir de um card atual
+
 function openOtherCard(cardId) {
     closeCard();
-    setTimeout(() => { // Pequeno delay para transição suave
+    setTimeout(() => { 
         openCard(cardId);
     }, 300);
 }
 
-// Função para visualizar o resumo do comunicado com a imagem
+
 function verComunicado(comunicadoId, imgSrc) {
     const comunicados = {
         'comunicado1': '<br>Pois é! Esse é um benefício que estendemos a todos os colaboradores e também à família de cada um de vocês! <br><br>Aproveitem essa oportunidade de ouro para acessar uma série de serviços, como lazer, esporte, saúde, cultura e muito mais.',
@@ -136,28 +128,27 @@ function verComunicado(comunicadoId, imgSrc) {
         'comunicado7': '<strong>Seja bem-vinda, Luciene! </strong>. <br> <br>Luciene Pimenta chegou para fortalecer o time de Departamento Pessoal da AndCont! Com uma experiência robusta na área, ela será fundamental para contribuir com excelência e eficiência no dia a dia da nossa equipe.<br><br>Estamos confiantes de que sua dedicação e conhecimento farão a diferença!<br><br>Sempre atenta aos detalhes e extremamente resiliente, ela veio para somar! Estamos ansiosos para ver todo o seu potencial brilhar aqui na <strong>AndCont!</strong>',
         'comunicado9': '<strong><br>Olá, AndConters!</strong><br>Estamos animados em compartilhar com vocês a programação de férias para 2025.<br><br>🌟 <strong>Planeje-se e aproveite ao máximo!<br></strong>Consulte agora mesmo o cronograma completo disponível no link: <a href="https://docs.google.com/spreadsheets/d/1AfEk6-Ol0fq4X7fS21jrhDHqJ37JKLvt/edit?usp=sharing&ouid=110009148269717977147&rtpof=true&sd=true" target="_blank" style="color: goldenrod;  text-decoration: none;">Acessar programação de férias</a>.',
         'calendario8': '<strong><br>Olá, AndConters!<br></strong><br>Consulte agora mesmo o cronograma completo disponível no link: <a href="https://docs.google.com/spreadsheets/d/1AfEk6-Ol0fq4X7fS21jrhDHqJ37JKLvt/edit?usp=sharing&ouid=110009148269717977147&rtpof=true&sd=true" target="_blank" style="color: goldenrod;  text-decoration: none;">Acessar programação de férias</a>.',
-        'link7':'<p><strong>Olá, pessoal!</strong><br>O departamento TIC apresenta um tutorial simples e rápido para que vocês possam utilizar perfeitamente nossa ferramenta de ligações.<br><strong><br>Como realizar uma ligação para números externos:</strong><br>Sempre que quiser ligar para um número externo, é necessário adicionar o DDD antes do número desejado.<br><strong><br>Exemplos:</strong><br>(021) 4444-5555<br>(011) 5555-4444<br><strong><br>Transferência de chamadas:</strong><br>Nosso MicroSip também permite transferir atendimentos de um colaborador para outro. Para isso, basta digitar:<br><code>*2 + ramal + #</code><br><strong><br>Exemplo:</strong><br><code>*21001#</code><br><br><strong>Como realizar uma ligação interna (para outro ramal):</strong><br>Para ligar para outro ramal, basta digitar diretamente o número do ramal desejado.<br><br><strong>Exemplo:</strong><br>Digitar <code>1001</code> realizará uma ligação para o Andrey.<br><br><strong>Lista de ramais dos nossos colaboradores:</strong><br><ul><li><strong>Andrey:</strong> 1000</li><li><strong>Yves:</strong> 1001</li><li><strong>Dayana:</strong> 1002</li><li><strong>Gabrielle:</strong> 1003</li><li><strong>Jamile:</strong> 1004</li><li><strong>Bruno:</strong> 1005</li><li><strong>Iago:</strong> 1006</li><li><strong>Isabelly:</strong> 1007</li><li><strong>Julia:</strong> 1008</li><li><strong>Taiane:</strong> 1009</li><li><strong>Tatiane:</strong> 1010</li><li><strong>Vanda:</strong> 1011</li><li><strong>Victoria:</strong> 1012</li><li><strong>Amanda:</strong> 1013</li></ul><br>Caso tenha dúvidas, entre em contato com o time do TIC. Estamos à disposição!<br><br><strong>AndCont – Conectando Pessoas e Números há mais de 30 anos.</strong></p>',
+        'link7':'<p><strong>Olá, pessoal!</strong><br>O departamento TIC apresenta um tutorial simples e rápido para que vocês possam utilizar perfeitamente nossa ferramenta de ligações.<br><strong><br>Como realizar uma ligação para números externos:</strong><br>Sempre que quiser ligar para um número externo, é necessário adicionar o DDD antes do número desejado.<br><strong><br>Exemplos:</strong><br>(021) 4444-5555<br>(011) 5555-4444<br><strong><br>Transferência de chamadas:</strong><br>Nosso MicroSip também permite transferir atendimentos de um colaborador para outro. Para isso, basta digitar:<br><code>*2 + ramal + #</code><br><strong><br>Exemplo:</strong><br><code>*21001#</code><br><br><strong>Como realizar uma ligação interna (para outro ramal):</strong><br>Para ligar para outro ramal, basta digitar diretamente o número do ramal desejado.<br><br><strong>Exemplo:</strong><br>Digitar <code>1001</code> realizará uma ligação para o Andrey.<br><br><strong>Lista de ramais dos nossos colaboradores:</strong><br><ul><li><strong>Luciene:</strong> 1000</li><li><strong>Yves:</strong> 1001</li><li><strong>Dayana:</strong> 1002</li><li><strong>Gabrielle:</strong> 1003</li><li><strong>Jamile:</strong> 1004</li><li><strong>Bruno:</strong> 1005</li><li><strong>Iago:</strong> 1006</li><li><strong>Isabelly:</strong> 1007</li><li><strong>Julia:</strong> 1008</li><li><strong>Taiane:</strong> 1009</li><li><strong>Tatiane:</strong> 1010</li><li><strong>Vanda:</strong> 1011</li><li><strong>Victoria:</strong> 1012</li><li><strong>Amanda:</strong> 1013</li></ul><br>Caso tenha dúvidas, entre em contato com o time do TIC. Estamos à disposição!<br><br><strong>AndCont – Conectando Pessoas e Números há mais de 30 anos.</strong></p>',
 
     };
 
     const resumo = comunicados[comunicadoId] || 'Resumo não disponível no momento.';
 
-    // Exibe o resumo do comunicado com HTML (para permitir links clicáveis)
+
     document.getElementById('resumo-conteudo').innerHTML = resumo;
 
-    // Verifica se imgSrc é válido e exibe a imagem
     const comunicadoImagem = document.getElementById('comunicado-imagem');
     if (imgSrc) {
         comunicadoImagem.src = imgSrc;
-        comunicadoImagem.style.display = 'block'; // Exibe a imagem
+        comunicadoImagem.style.display = 'block'; 
     } else {
-        comunicadoImagem.style.display = 'none'; // Oculta a imagem se não houver
+        comunicadoImagem.style.display = 'none';
     }
 
     openCard('resumo-card');
 }
 
-// Função para fechar o card de resumo do comunicado
+
 function closeResumoCard() {
     document.getElementById('resumo-card').classList.remove('active');
     document.getElementById('overlay').style.display = 'none';
@@ -166,31 +157,24 @@ function closeResumoCard() {
 const popup = document.getElementById('popup');
 const closeButton = document.getElementById('close-button');
 
-// Função para abrir o popup
 function showPopup() {
     document.getElementById('popup-novo-comunicado').style.display = 'block';
 }
 
-// Função para fechar o popup
 function closePopup() {
     document.getElementById('popup-novo-comunicado').style.display = 'none';
 }
 
-// Função para redirecionar ao comunicado
 function goToComunicado() {
     closePopup(); // Fechar o popup
-    window.location.href = '#comunicado'; // Alterar para o link ou âncora correta
+    window.location.href = '#comunicado'; 
 }
 
-// Exibir o popup após um pequeno atraso (ex: 3 segundos)
-setTimeout(showPopup, 5); // 3000 milissegundos = 3 segundos
+setTimeout(showPopup, 5); 
 
-// Verifica se o navegador suporta notificações
 if ("Notification" in window) {
-    // Solicita permissão assim que o site é carregado
     window.addEventListener('load', () => {
-        // Verifica se a permissão ainda não foi definida pelo usuário
-        if (Notification.permission === "default") { // "default" significa que o usuário ainda não escolheu
+        if (Notification.permission === "default") { 
             Notification.requestPermission();
         }
     });

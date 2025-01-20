@@ -52,11 +52,6 @@
             Luciene - 13/01/2025</a></li>
         <li class="news" onclick="verComunicado('comunicado8','')"><a href="javascript:void(0)"> Saúde é o que interessa
             - 08/01/2025</a></li>
-        <li onclick="verComunicado('comunicado6','imagens/fotocapa.jpg')"><a href="javascript:void(0)"> Fotos da
-            Confraternização - 18/12/2024</a></li>
-        <!--  <li onclick="verComunicado('comunicado3', 'imagens/intranet25.png'')"><a href="javascript:void(0)">🔔 TIC - 06/12/2024</a></li>-->
-        <li class="news" onclick="verComunicado('comunicado4', '')"><a href="javascript:void(0)"> Bem vindos a Intranet
-            - 09/12/2024</a></li>
       </ul>
     </div>
 
@@ -66,7 +61,6 @@
     </div>
   </div>
 
-  <!-- Card de Links -->
   <div class="card" id="links-card">
     <header>
       <h2><span class="icon">🌐</span>Links</h2>
@@ -98,7 +92,6 @@
     </div>
   </div>
 
-  <!-- Card de Calendário -->
   <div class="card" id="calendario-card">
     <header>
 
@@ -114,13 +107,6 @@
             2025 - 14/01/2025</a>
         <li class="news" onclick="verComunicado('calendario7','imagens/niver_janeiro.jpg')"><a
             href="javascript:void(0)"> Aniversariantes - Janeiro - 01/01/2025</a>
-        <li onclick="verComunicado('calendario6','imagens/natal3.png')"><a href="javascript:void(0)"> Brunch AndCont -
-            19/12/2024</a>
-        <li onclick="verComunicado('calendario5','')"><a href="javascript:void(0)"> Retorno presencial - 09/12/2024</a>
-        </li>
-        <li onclick="verComunicado('calendario4','')"><a href="javascript:void(0)"> Home Office AndCont - 09/12/2024</a>
-        </li>
-        <li onclick="verComunicado('calendario1', '')"><a href="javascript:void(0)"> Festa AndCont - 06/12/2024</a></li>
       </ul>
     </div>
 
@@ -135,7 +121,6 @@
       <p>Proibido tentar salvar qualquer conteúdo do portal</p>
     </div>
   </div>
-  <!-- Resumo do Comunicado com Imagem -->
   <div class="card" id="resumo-card">
     <header>
       <h2>Conteúdo</h2>
@@ -171,15 +156,15 @@
         appId: "9e585ea7-1a5c-40b6-94b2-a023b57fd61c",
         safari_web_id: "web.onesignal.auto.0e731bf1-0f8d-4c8c-8593-03e4c907000a",
         notifyButton: {
-          enable: true, // Ativar o botão de notificação
-          size: 'medium', // Tamanho do botão: 'small', 'medium', ou 'large'
-          theme: 'default', // Tema: 'default' ou 'inverse'
-          position: 'bottom-right', // Posição: 'bottom-left' ou 'bottom-right'
+          enable: true, 
+          size: 'medium', 
+          theme: 'default', 
+          position: 'bottom-right', 
           offset: {
-            bottom: '20px', // Distância do fundo
-            right: '20px' // Distância da direita
+            bottom: '20px', 
+            right: '20px' 
           },
-          showCredit: false, // Ocultar o logo do OneSignal
+          showCredit: false, 
           text: {
             'tip.state.unsubscribed': 'Subscribe to notifications',
             'tip.state.subscribed': "You're subscribed to notifications",
@@ -195,16 +180,16 @@
             'dialog.blocked.message': "Follow these instructions to allow notifications:"
           },
           colors: {
-            'circle.background': 'rgb(0, 123, 255)', // Fundo do círculo do botão
-            'circle.foreground': 'white', // Cor do ícone no círculo
-            'badge.background': 'rgb(0, 123, 255)', // Fundo do badge
-            'badge.foreground': 'white', // Cor do texto do badge
-            'badge.bordercolor': 'white', // Cor da borda do badge
-            'pulse.color': 'white', // Cor do pulso quando clicado
-            'dialog.button.background.hovering': 'rgb(0, 104, 217)', // Cor do botão ao passar o mouse
-            'dialog.button.background.active': 'rgb(0, 86, 173)', // Cor do botão quando ativo
-            'dialog.button.background': 'rgb(0, 123, 255)', // Cor de fundo do botão
-            'dialog.button.foreground': 'white' // Cor do texto do botão
+            'circle.background': 'rgb(0, 123, 255)', 
+            'circle.foreground': 'white', 
+            'badge.background': 'rgb(0, 123, 255)', 
+            'badge.foreground': 'white', 
+            'badge.bordercolor': 'white', 
+            'pulse.color': 'white', 
+            'dialog.button.background.hovering': 'rgb(0, 104, 217)', 
+            'dialog.button.background.active': 'rgb(0, 86, 173)', 
+            'dialog.button.background': 'rgb(0, 123, 255)', 
+            'dialog.button.foreground': 'white' 
           },
           displayPredicate: function () {
             return OneSignal.isPushNotificationsEnabled()
