@@ -15,7 +15,7 @@ html {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-size: cover;
-  background-color: #296c94;
+  background-color: #663399;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -136,7 +136,7 @@ img {
 }
 
 .custom-alert-close:hover {
-  color: #C4902A;
+  color: #663399;
 }
 
 .overlay {
@@ -183,7 +183,7 @@ img {
 
 .card header h2 {
   font-size: 26px;
-  color: #162c49;
+  color: #663399;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -192,7 +192,7 @@ img {
 .card header h2 .icon {
   margin-right: 10px;
   font-size: 28px;
-  color: #C4902A;
+  color: #663399;
 }
 
 .close-btn {
@@ -205,7 +205,7 @@ img {
 }
 
 .close-btn:hover {
-  color: #C4902A;
+  color: #663399;
   transform: scale(1.2);
 }
 
@@ -222,7 +222,7 @@ img {
 
 .historico-section h3 {
   font-size: 15px;
-  color: #162c49;
+  color: #663399;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -244,13 +244,13 @@ img {
 }
 
 .historico-section ul li:hover {
-  background-color: #C4902A;
+  background-color: #663399;
   transform: scale(1.02);
 }
 
 .historico-section ul li a {
   text-decoration: none;
-  color: #C4902A;
+  color: #4a2074;
   font-weight: 600;
   flex: 1;
 }
@@ -261,17 +261,17 @@ img {
 
 @keyframes subtle-pulse {
   0% {
-    box-shadow: #C4902A;
+    box-shadow: #663399;
     transform: scale(1);
   }
 
   50% {
-    box-shadow: 0 0 10px 3px #C4902A;
+    box-shadow: 0 0 10px 3px #663399;
     transform: scale(1.02);
   }
 
   100% {
-    box-shadow: #C4902A;
+    box-shadow: #663399;
     transform: scale(1);
   }
 }
@@ -285,7 +285,7 @@ img {
 }
 
 .navigation button {
-  background: linear-gradient(145deg, #d0af70, #d0af70);
+  background: linear-gradient(145deg, #663399, #663399);
   color: white;
   border: none;
   padding: 12px 25px;
@@ -300,7 +300,7 @@ img {
 }
 
 .navigation button:hover {
-  background: linear-gradient(145deg, #e9b95f, #e4bd74);
+  background: linear-gradient(145deg, #9052cd, #9052cd);
   transform: translateY(-3px);
 }
 
@@ -328,7 +328,7 @@ img {
 
 .search-container input:focus {
   outline: none;
-  border-color: #162c49;
+  border-color: #663399;
   box-shadow: 0 0 8px rgba(146, 29, 29, 0.3);
 }
 
@@ -337,7 +337,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(145deg, #162c49, #1a4379);
+  background: linear-gradient(145deg, #663399, #663399);
   border-radius: 6px;
 }
 
@@ -376,7 +376,7 @@ img {
 }
 
 .popup-btn {
-  background-color: #162c49;
+  background-color: #663399;
   color: white;
   border: none;
   padding: 10px 20px;
