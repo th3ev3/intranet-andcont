@@ -1,48 +1,4 @@
-const snowContainer = document.getElementById("snow-container");
-const snowContent = ['&#10052', '&#10053', '&#10054']
 
-const random = (num) => {
-    return Math.floor(Math.random() * num);
-}
-
-const getRandomStyles = () => {
-    const top = random(100);
-    const left = random(100);
-    const dur = random(10) + 10;
-    const size = random(25) + 25;
-    return `
-    top: -${top}%;
-    left: ${left}%;
-    font-size: ${size}px;
-    animation-duration: ${dur}s;
-  `;
-}
-
-const createSnow = (num) => {
-    for (var i = num; i > 0; i--) {
-        var snow = document.createElement("div");
-        snow.className = "snow";
-        snow.style.cssText = getRandomStyles();
-        snow.innerHTML = snowContent[random(3)]
-        snowContainer.append(snow);
-    }
-}
-
-const removeSnow = () => {
-    snowContainer.style.opacity = "0";
-    setTimeout(() => {
-        snowContainer.remove()
-    }, 500)
-}
-
-window.addEventListener("load", () => {
-    createSnow(30)
-    setTimeout(removeSnow, (1000 * 60))
-});
-
-window.addEventListener("click", () => {
-    removeSnow()
-});
 
 window.addEventListener('load', function () {
     var audio = document.getElementById('sambaSong');
@@ -131,6 +87,7 @@ function verComunicado(comunicadoId, imgSrc) {
         'link7': '<p><strong>Olá, pessoal!</strong><br>O departamento TIC apresenta um tutorial simples e rápido para que vocês possam utilizar perfeitamente nossa ferramenta de ligações.<br><strong><br>Como realizar uma ligação para números externos:</strong><br>Sempre que quiser ligar para um número externo, é necessário adicionar o DDD antes do número desejado.<br><strong><br>Exemplos:</strong><br>(021) 4444-5555<br>(011) 5555-4444<br><strong><br>Transferência de chamadas:</strong><br>Nosso MicroSip também permite transferir atendimentos de um colaborador para outro. Para isso, siga os seguintes passos:<br><br>1. Digite <code>*2</code>.<br>2. Aguarde a voz informando que você pode transferir a chamada.<br>3. Digite o número do ramal para o qual deseja transferir a chamada.<br>4. Aguarde o sinal sonoro (um "PIIII") que confirma que o ramal foi selecionado.<br>5. Finalmente, digite <code>#</code> para concluir a transferência.<br><br><strong>Exemplo:</strong><br><code>*21001#</code><br><br><strong>Como realizar uma ligação interna (para outro ramal):</strong><br>Para ligar para outro ramal, basta digitar diretamente o número do ramal desejado.<br><br><strong>Exemplo:</strong><br>Digitar <code>1001</code> realizará uma ligação para o Andrey.<br><br><strong>Lista de ramais dos nossos colaboradores:</strong><br><ul><li><strong>Luciene:</strong> 1000</li><li><strong>Yves:</strong> 1001</li><li><strong>Dayana:</strong> 1002</li><li><strong>Gabrielle:</strong> 1003</li><li><strong>Jamile:</strong> 1004</li><li><strong>Bruno:</strong> 1005</li><li><strong>Iago:</strong> 1006</li><li><strong>Isabelly:</strong> 1007</li><li><strong>Julia:</strong> 1008</li><li><strong>Taiane:</strong> 1009</li><li><strong>Tatiane:</strong> 1010</li><li><strong>Vanda:</strong> 1011</li><li><strong>Vitoria:</strong> 1012</li><li><strong>Amanda:</strong> 1013</li><strong><li>Andrey:</strong> 1014</li> </ul><br>Caso tenha dúvidas, entre em contato com o time do TIC. Estamos à disposição!<br><br><strong>AndCont – Conectando Pessoas e Números há mais de 30 anos.</strong></p>',
         'calendario9':'<br>Treinamento: <b>Saúde Mental no Trabalho</b><br><br>Na próxima segunda-feira, <b>03/02/2025</b>, das <b>8h às 9h</b>, vamos nos reunir no <b>Departamento Pessoal</b> para um treinamento especial sobre a importância da saúde mental no ambiente de trabalho.<br>Será um momento de reflexão e aprendizado, com uma dinâmica interativa e foco na prevenção. Afinal, cuidar da mente é tão essencial quanto cuidar do corpo.<br><br><b>Contamos com a participação de todos para essa troca enriquecedora!<br></b><br>📍 <b>Local:</b> Setor do Departamento Pessoal<br>⏰ <b>Horário:</b> 8h às 9h<br><b>Nos vemos lá! 😊</b>',
         'calendario10': '<p>🌟🎉 <strong>Pessoal, atenção para uma notícia super especial!</strong> 🎉🌟<br><br>Hoje é dia de celebrar os <strong>aniversariantes do mês de janeiro!</strong> 🥳🎂<br>Vamos nos reunir para comemorar com muito carinho, risadas e, claro, <strong>bolo!</strong> 🍰💖<br><br>A comemoração será <strong>às 16h, na AndCont</strong>, então não se esqueçam de reservar um tempinho para esse momento de <strong>alegria, amizade e boas energias!</strong> 🌈<br><br>Vamos tornar esse dia ainda mais especial, <strong>celebrando juntos</strong> as conquistas e os sorrisos dos nossos colegas de trabalho! 😄🎈<strong><br><br>Contamos com todos vocês</strong> para deixar essa festa ainda mais incrível! 💫</p>',
+        'comunicado22':'📢 Prezados colaboradores, segue a nossa programação de carnaval<br> <br>Nos dias <strong>03/03, 04/03 e 05/03</strong>, não haverá expediente.<br>Nos dias <strong>06/03 e 07/03</strong>, será home office.<br><br>Retornaremos as atividades no escritório no dia <strong>10/03</strong>.<br><br>Contamos com a colaboração de todos!<br>Divirtam-se com moderação e aproveitem o feriadão!<br><br> <strong>"Viver cada dia como se fosse o último é uma ótima oportunidade para aprender a amar cada segundo do seu dia".🤗😉</strong><br><br><br>Atenciosamente,<br><strong> AndCont</strong>',
         'calendario11':'Prezados colaboradores,<br><br><strong>Amanhã, antes de iniciarmos o expediente, precisaremos de 10 minutinhos da atenção de todos. Contamos com a presença de cada um!</strong><br><br>Desde já, agradecemos a colaboração.'
     };
 
@@ -182,4 +139,86 @@ if ("Notification" in window) {
     });
 } else {
     console.log("Este navegador não suporta notificações.");
+}
+const employees = [
+    { name: "Luciene", extension: "1000" },
+    { name: "Yves", extension: "1001" },
+    { name: "Dayana", extension: "1002" },
+    { name: "Gabrielle", extension: "1003" },
+    { name: "Jamile", extension: "1004" },
+    { name: "Bruno", extension: "1005" },
+    { name: "Iago", extension: "1006" },
+    { name: "Isabelly", extension: "1007" },
+    { name: "Julia", extension: "1008" },
+    { name: "Taiane", extension: "1009" },
+    { name: "Tatiane", extension: "1010" },
+    { name: "Vanda", extension: "1011" },
+    { name: "Vitoria", extension: "1012" },
+    { name: "Amanda", extension: "1013" },
+    { name: "Andrey", extension: "1014" }
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById('searchRamal');
+    if (searchInput) {
+        searchInput.addEventListener('input', filterEmployees);
+    }
+
+    displayEmployees(employees);
+});
+
+
+function filterEmployees() {
+    const searchInput = document.getElementById('searchRamal');
+    if (!searchInput) return;
+
+    const searchTerm = searchInput.value.trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, ""); 
+
+    const filtered = employees.filter(employee => {
+        const name = employee.name.toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+        const extension = employee.extension.toString();
+
+        return name.includes(searchTerm) || extension.includes(searchTerm);
+    });
+
+    displayEmployees(filtered);
+}
+
+function displayEmployees(employeesList) {
+    const directoryGrid = document.getElementById('directoryGrid');
+    if (!directoryGrid) return;
+
+    directoryGrid.innerHTML = '';
+
+    if (employeesList.length === 0) {
+        directoryGrid.innerHTML = `
+            <div class="no-results">
+                <i class="fas fa-user-slash"></i>
+                <h3>Nenhum coloborador encontrado</h3>
+                <p>Tente novamente</p>
+            </div>
+        `;
+        return;
+    }
+
+    employeesList.forEach(employee => {
+        const card = document.createElement('div');
+        card.className = 'employee-card';
+        card.innerHTML = `
+            <div class="avatar">${employee.name[0].toUpperCase()}</div>
+            <div class="employee-info">
+                <div class="employee-name">${employee.name}</div>
+                <div class="employee-extension">
+                    <i class="fas fa-phone-alt"></i>
+                    ${employee.extension}
+                </div>
+            </div>
+        `;
+        directoryGrid.appendChild(card);
+    });
 }

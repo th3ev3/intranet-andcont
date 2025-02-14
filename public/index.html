@@ -25,7 +25,7 @@
   <button class="button6" id="comunicados" onclick="openCard('comunicados-card')">COMUNICADOS</button>
   <button class="button5" id="calendario" onclick="openCard('calendario-card')">CALENDÁRIO</button>
   <button class="button5" id="links" onclick="openCard('links-card')">LINKS</button>
- <!-- <div id="popup-novo-comunicado" class="popup">
+  <div id="popup-novo-comunicado" class="popup">
    <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
       <p style="font-size: 15px" ;>📢 Novo postagem disponível!    <br>Clique no botão abaixo.</p>
@@ -45,14 +45,10 @@
     <div class="historico-section" style="font-size: 16px;">
       <h3>Histórico de Comunicados </h3>
       <ul id="comunicados-list">
-        <li class="news" onclick="verComunicado('calendario11','')"><a href="javascript:void(0)"> Pessoal, um recado rápido! - 04/02/2025</a>
+        <li class="new" onclick="verComunicado('comunicado22','')"><a href="javascript:void(0)"> Expediente AndCont - 14/02/2025</a>
         <li onclick="verComunicado('link7','')"><a href="javascript:void(0)">Tutorial Ligações  - 16/01/2025</a></li>
         <li class="news" onclick="verComunicado('comunicado9','imagens/ferias.gif')"><a href="javascript:void(0)">
             Programação de Férias 2025 - 14/01/2025</a></li>
-        <li class="news" onclick="verComunicado('comunicado7','imagens/t.png')"><a href="javascript:void(0)"> Bem-vinda
-            Luciene - 13/01/2025</a></li>
-        <li class="news" onclick="verComunicado('comunicado8','')"><a href="javascript:void(0)"> Saúde é o que interessa
-            - 08/01/2025</a></li>
       </ul>
     </div>
 
@@ -135,7 +131,27 @@
   </div>
   </div>
 
-  <button class="button-patch" id="patch" onclick="openCard('patch-card')">V.1.0.1</button>
+  <button class="button-patch" id="ramais" onclick="openCard('ramais-card')">RAMAIS</button>
+  <div class="card" id="ramais-card">
+    <header>
+        <h2><span class="icon">📞</span>Consulta de Ramais</h2>
+        <button class="close-btn" onclick="closeCard()">&times;</button>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" 
+               class="search-box" 
+               placeholder="🔍 Pesquisar colaborador ou ramal..."
+               id="searchRamal">
+    </div>
+
+    <div class="directory-grid" id="directoryGrid">
+    </div>
+
+
+</div>
+
+  <button class="button-patch" id="patch" onclick="openCard('patch-card')">V.1.0.3</button>
   <div class="card" id="patch-card">
     <header>
       <h2><span class="icon">🛠️</span>Patches de Atualização</h2>
@@ -147,6 +163,8 @@
       <ul>
         <li>Atualização 1.0.1 30/12/2024 - Personalização para o Ano Novo e Otimização de Desempenho</li>
         <li>Atualização 1.0.2 30/01/2025 - Personalização de Carnaval e Otimização de Desempenho</li>
+        <li>Atualização 1.0.3 14/02/2025 - Botão de ramais</li>
+
 
       </ul>
     </div>
