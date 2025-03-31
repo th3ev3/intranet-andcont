@@ -15,7 +15,7 @@ html {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-size: cover;
-  background-color: #663399;
+  background-color: #8c402c;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -132,7 +132,7 @@ img {
 }
 
 .custom-alert-close:hover {
-  color: #663399;
+  color: #8c402c;
 }
 
 .overlay {
@@ -147,8 +147,8 @@ img {
   transition: opacity 0.3s ease;
 }
 
+
 .card {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -162,14 +162,16 @@ img {
   z-index: 1001;
   max-height: 90%;
   overflow-y: auto;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0.4s;
 }
 
 .card.active {
-  display: block;
   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
 }
-
 .card header {
   display: flex;
   justify-content: space-between;
@@ -179,7 +181,7 @@ img {
 
 .card header h2 {
   font-size: 26px;
-  color: #663399;
+  color: #8c402c;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -201,7 +203,7 @@ img {
 }
 
 .close-btn:hover {
-  color: #663399;
+  color: #C4902A;
   transform: scale(1.2);
 }
 
@@ -218,7 +220,7 @@ img {
 
 .historico-section h3 {
   font-size: 15px;
-  color: #663399;
+  color: #8c402c;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -246,7 +248,7 @@ img {
 
 .historico-section ul li a {
   text-decoration: none;
-  color: #4a2074;
+  color: #8c402c;
   font-weight: 600;
   flex: 1;
 }
@@ -257,17 +259,17 @@ img {
 
 @keyframes subtle-pulse {
   0% {
-    box-shadow: #663399;
+    box-shadow: #8c402c;
     transform: scale(1);
   }
 
   50% {
-    box-shadow: 0 0 10px 3px #663399;
+    box-shadow: 0 0 10px 3px #8c402c;
     transform: scale(1.02);
   }
 
   100% {
-    box-shadow: #663399;
+    box-shadow: #8c402c;
     transform: scale(1);
   }
 }
@@ -281,7 +283,7 @@ img {
 }
 
 .navigation button {
-  background: linear-gradient(145deg, #663399, #663399);
+  background: linear-gradient(145deg, #8c402c, #8c402c);
   color: white;
   border: none;
   padding: 12px 25px;
@@ -296,7 +298,7 @@ img {
 }
 
 .navigation button:hover {
-  background: linear-gradient(145deg, #9052cd, #9052cd);
+  background: linear-gradient(145deg, #552b20, #8c402c);
   transform: translateY(-3px);
 }
 
@@ -316,7 +318,7 @@ img {
   width: 80%;
   max-width: 400px;
   padding: 12px 18px;
-  border: 2px solid #C4902A;
+  border: 2px solid #8c402c;
   border-radius: 30px;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -333,7 +335,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(145deg, #663399, #663399);
+  background: linear-gradient(145deg, #8c402c, #8c402c);
   border-radius: 6px;
 }
 
@@ -372,7 +374,7 @@ img {
 }
 
 .popup-btn {
-  background-color: #663399;
+  background-color: #8c402c;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -409,7 +411,7 @@ img {
   bottom: 10px;
   right: 10px;
     padding: 10px 20px;
-  background-color: #C4902A;
+  background-color: #66291a;
   color: white;
   border: none;
   border-radius:10px;
@@ -420,7 +422,7 @@ img {
 }
 
 .button-patch:hover {
-  background-color: #dd9d1d;
+  background-color: #8c402c;
 }
 
 /* Posicionamento do novo botão */
@@ -458,7 +460,7 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #8e44ad 0%, #663399 100%);
+  background: linear-gradient(135deg, #8c402c, #8c402c 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,7 +474,7 @@ img {
 
 .employee-name {
   font-size: 15px;
-  color: #663399;
+  color: #6b2c1c;
   margin-bottom: 5px;
   font-weight: bold;
 }

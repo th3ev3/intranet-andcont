@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Central de Comunicados AndCont</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="/Themes/pascoa.css">
   <script type="text/javascript" src="script.js"></script>
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
@@ -14,212 +14,205 @@
 </head>
 
 <body>
-
-  <!--<audio id="sambaSong" loop>
-    <source src="samba.mp3" type="audio/mpeg"> 
-    Your browser does not support the audio element.
-  </audio>
-  </div>-->
-
-  <img src="imagens/logo_rgb1.png" usemap="#image-map" class="background-img">
-
+  <img src="imagens/pascoa2.png" usemap="#image-map" class="background-img">
   <button class="button6" id="comunicados" onclick="openCard('comunicados-card')">COMUNICADOS</button>
   <button class="button6" id="calendario" onclick="openCard('calendario-card')">CALENDÁRIO</button>
   <button class="button6" id="links" onclick="openCard('links-card')">LINKS</button>
-  <!--<div id="popup-novo-comunicado" class="popup">
+  
+  <div id="popup-novo-comunicado" class="popup">
     <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
       <p style="font-size: 15px" ;>📢 Novo postagem disponível! <br></p>
-      <button onclick="openCard('comunicados-card')" class="popup-btn">NOVA POSTAGEM</button>
+      <button onclick="openCard('calendario-card')" class="popup-btn">NOVA POSTAGEM</button>
     </div>
     </div>-->
 
-    <div class="overlay" id="overlay" onclick="closeCard()"></div>
+  <div class="overlay" id="overlay" onclick="closeCard()"></div>
 
-    <div class="card" id="comunicados-card">
-      <header>
-        <h2><span class="icon">📢</span>Comunicados</h2>
-        <button class="close-btn" onclick="closeCard()">&times;</button>
-      </header>
-      <p>Aqui vão os comunicados mais recentes da empresa, com informações importantes para todos os colaboradores.</p>
+  <div class="card" id="comunicados-card">
+    <header>
+      <h2><span class="icon">📢</span>Comunicados</h2>
+      <button class="close-btn" onclick="closeCard()">&times;</button>
+    </header>
+    <p>Aqui vão os comunicados mais recentes da empresa, com informações importantes para todos os colaboradores.</p>
 
-      <div class="historico-section" style="font-size: 16px;">
-        <h3>Histórico de Comunicados </h3>
-        <ul id="comunicados-list">
-          <li class="new" onclick="verComunicado('comunicado11','imagens/leticia.png')"><a href="javascript:void(0)">Bem
-              vinda - Leticia 10/03/2025</a></li>
-          <li onclick="verComunicado('link7','')"><a href="javascript:void(0)">Tutorial Ligações - 16/01/2025</a></li>
-          <li class="news" onclick="verComunicado('comunicado9','imagens/ferias.gif')"><a href="javascript:void(0)">
-              Programação de Férias 2025 - 14/01/2025</a></li>
-        </ul>
-      </div>
-
-      <div class="navigation">
-        <button onclick="openOtherCard('links-card')">Ver Links</button>
-        <button onclick="openOtherCard('calendario-card')">Ver Calendário</button>
-      </div>
+    <div class="historico-section" style="font-size: 16px;">
+      <h3>Histórico de Comunicados </h3>
+      <ul id="comunicados-list">
+        <li class="news" onclick="verComunicado('comunicado11','imagens/leticia.png')"><a href="javascript:void(0)">Bem
+            vinda - Leticia 10/03/2025</a></li>
+        <li onclick="verComunicado('link7','')"><a href="javascript:void(0)">Tutorial Ligações - 16/01/2025</a></li>
+        <li class="news" onclick="verComunicado('comunicado9','imagens/ferias.gif')"><a href="javascript:void(0)">
+            Programação de Férias 2025 - 14/01/2025</a></li>
+      </ul>
     </div>
 
-    <div class="card" id="links-card">
-      <header>
-        <h2><span class="icon">🌐</span>Links</h2>
-        <button class="close-btn" onclick="closeCard()">&times;</button>
-      </header>
-      <p>Aqui estão os links úteis para acessar as principais plataformas e portais da empresa.</p>
+    <div class="navigation">
+      <button onclick="openOtherCard('links-card')">Ver Links</button>
+      <button onclick="openOtherCard('calendario-card')">Ver Calendário</button>
+    </div>
+  </div>
 
-      <div class="historico-section" style="font-size: 16px">
-        <h3>Histórico de Links</h3>
-        <ul id="links-list">
+  <div class="card" id="links-card">
+    <header>
+      <h2><span class="icon">🌐</span>Links</h2>
+      <button class="close-btn" onclick="closeCard()">&times;</button>
+    </header>
+    <p>Aqui estão os links úteis para acessar as principais plataformas e portais da empresa.</p>
 
-          <li onclick="verComunicado('link6','')"><a href="javascript:void(0)">Cursos - 06/01/2025</a></li>
-          <li onclick="verComunicado('link5','')"><a href="javascript:void(0)">Fotos Confraternização 2024 -
-              18/12/2024</a></li>
-          <li onclick="verComunicado('link','')"><a href="javascript:void(0)">Portal - 23/10/2024</a></li>
-          <li onclick="verComunicado('link1','')"><a href="javascript:void(0)">Nosso Site - 23/10/2024 </a></li>
-          <li onclick="verComunicado('link2','')"><a href="javascript:void(0)">Nossas Redes Sociais - 23/10/2024</a>
-          </li>
-          <li onclick="verComunicado('link3','')"><a href="javascript:void(0)">Google Drive - 23/10/2024</a></li>
-          <li onclick="verComunicado('link4','')"><a href="javascript:void(0)">Código de ética e Conduta- 09/12/2024</a>
-          </li>
+    <div class="historico-section" style="font-size: 16px">
+      <h3>Histórico de Links</h3>
+      <ul id="links-list">
 
-        </ul>
-        </ul>
-      </div>
+        <li onclick="verComunicado('link6','')"><a href="javascript:void(0)">Cursos - 06/01/2025</a></li>
+        <li onclick="verComunicado('link5','')"><a href="javascript:void(0)">Fotos Confraternização 2024 -
+            18/12/2024</a></li>
+        <li onclick="verComunicado('link','')"><a href="javascript:void(0)">Portal - 23/10/2024</a></li>
+        <li onclick="verComunicado('link1','')"><a href="javascript:void(0)">Nosso Site - 23/10/2024 </a></li>
+        <li onclick="verComunicado('link2','')"><a href="javascript:void(0)">Nossas Redes Sociais - 23/10/2024</a>
+        </li>
+        <li onclick="verComunicado('link3','')"><a href="javascript:void(0)">Google Drive - 23/10/2024</a></li>
+        <li onclick="verComunicado('link4','')"><a href="javascript:void(0)">Código de ética e Conduta- 09/12/2024</a>
+        </li>
 
-      <div class="navigation">
-        <button onclick="openOtherCard('comunicados-card')">Ver Comunicados</button>
-        <button onclick="openOtherCard('calendario-card')">Ver Calendário</button>
-      </div>
+      </ul>
+      </ul>
     </div>
 
-    <div class="card" id="calendario-card">
-      <header>
-
-        <h2><span class="icon">📅</span>Calendário</h2>
-        <button class="close-btn" onclick="closeCard()">&times;</button>
-      </header>
-      <p>Aqui está o calendário de eventos e compromissos importantes da empresa.</p>
-
-      <div class="historico-section" style="font-size: 16px">
-        <h3>Histórico de Eventos</h3>
-        <ul id="calendario-list">
-          <li class="news" onclick="verComunicado('calendario7','')"><a href="javascript:void(0)"> Aniversariantes -
-              Março - 01/03/2025</a>
-          <li class="news" onclick="verComunicado('calendario8','')"><a href="javascript:void(0)"> Programação de férias
-              2025 - 14/01/2025</a>
-
-        </ul>
-      </div>
-
-      <div class="navigation">
-        <button onclick="openOtherCard('comunicados-card')">Ver Comunicados</button>
-        <button onclick="openOtherCard('links-card')">Ver Links</button>
-      </div>
+    <div class="navigation">
+      <button onclick="openOtherCard('comunicados-card')">Ver Comunicados</button>
+      <button onclick="openOtherCard('calendario-card')">Ver Calendário</button>
     </div>
-    <div id="custom-alert" class="custom-alert" style="font-size: 17px">
-      <div class="custom-alert-content">
-        <span class="custom-alert-close" onclick="closeCustomAlert()">&times;</span>
-        <p>Proibido tentar salvar qualquer conteúdo do portal</p>
-      </div>
-    </div>
-    <div class="card" id="resumo-card">
-      <header>
-        <h2>Conteúdo</h2>
-        <button class="close-btn" onclick="closeResumoCard()">&times;</button>
-      </header>
-      <img id="comunicado-imagem" src="" alt="Imagem do Comunicado"
-        style="width:100%;max-height:300px;object-fit:cover;" onclick="ampliarImagem(this)">
-      <p id="resumo-conteudo">Aqui vai o resumo do comunicado selecionado.</p>
-    </div>
-    </div>
+  </div>
+
+  <div class="card" id="calendario-card">
+    <header>
+
+      <h2><span class="icon">📅</span>Calendário</h2>
+      <button class="close-btn" onclick="closeCard()">&times;</button>
+    </header>
+    <p>Aqui está o calendário de eventos e compromissos importantes da empresa.</p>
+
+    <div class="historico-section" style="font-size: 16px">
+      <h3>Histórico de Eventos</h3>
+      <ul id="calendario-list">
+        <li class="new" onclick="verComunicado('calendario7','')"><a href="javascript:void(0)"> Aniversariantes -
+            Abril - 01/04/2025</a>
+        <li class="news" onclick="verComunicado('calendario8','')"><a href="javascript:void(0)"> Programação de férias
+            2025 - 14/01/2025</a>
+
+      </ul>
     </div>
 
-    <button class="button-patch" id="ramais" onclick="openCard('ramais-card')">RAMAIS</button>
-    <div class="card" id="ramais-card">
-      <header>
-        <h2><span class="icon">📞</span>Consulta de Ramais</h2>
-        <button class="close-btn" onclick="closeCard()">&times;</button>
-      </header>
+    <div class="navigation">
+      <button onclick="openOtherCard('comunicados-card')">Ver Comunicados</button>
+      <button onclick="openOtherCard('links-card')">Ver Links</button>
+    </div>
+  </div>
+  <div id="custom-alert" class="custom-alert" style="font-size: 17px">
+    <div class="custom-alert-content">
+      <span class="custom-alert-close" onclick="closeCustomAlert()">&times;</span>
+      <p>Proibido tentar salvar qualquer conteúdo do portal</p>
+    </div>
+  </div>
+  <div class="card" id="resumo-card">
+    <header>
+      <h2>Conteúdo</h2>
+      <button class="close-btn" onclick="closeResumoCard()">&times;</button>
+    </header>
+    <img id="comunicado-imagem" src="" alt="Imagem do Comunicado" style="width:100%;max-height:300px;object-fit:cover;"
+      onclick="ampliarImagem(this)">
+    <p id="resumo-conteudo">Aqui vai o resumo do comunicado selecionado.</p>
+  </div>
+  </div>
+  </div>
 
-      <div class="search-container">
-        <input type="text" class="search-box" placeholder="🔍 Pesquisar colaborador ou ramal..." id="searchRamal">
-      </div>
+  <button class="button-patch" id="ramais" onclick="openCard('ramais-card')">RAMAIS</button>
+  <div class="card" id="ramais-card">
+    <header>
+      <h2><span class="icon">📞</span>Consulta de Ramais</h2>
+      <button class="close-btn" onclick="closeCard()">&times;</button>
+    </header>
 
-      <div class="directory-grid" id="directoryGrid">
-      </div>
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="🔍 Pesquisar colaborador ou ramal..." id="searchRamal">
     </div>
 
-    <button class="button-patch" id="patch" onclick="openCard('patch-card')">V.1.0.3</button>
-    <div class="card" id="patch-card">
-      <header>
-        <h2><span class="icon">🛠️</span>Patches de Atualização</h2>
-        <button class="close-btn" onclick="closeCard()">&times;</button>
-      </header>
-      <p>Aqui você pode acompanhar as últimas atualizações e melhorias do sistema.</p>
-
-      <div class="patch-list" style="font-size: 16px;">
-        <ul>
-          <li>Atualização 1.0.1 30/12/2024 - Personalização para o Ano Novo e Otimização de Desempenho</li>
-          <li>Atualização 1.0.2 30/01/2025 - Personalização de Carnaval e Otimização de Desempenho</li>
-          <li>Atualização 1.0.3 14/02/2025 - Botão de ramais</li>
-
-
-        </ul>
-      </div>
+    <div class="directory-grid" id="directoryGrid">
     </div>
+  </div>
 
-    <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function (OneSignal) {
-        await OneSignal.init({
-          appId: "9e585ea7-1a5c-40b6-94b2-a023b57fd61c",
-          safari_web_id: "web.onesignal.auto.0e731bf1-0f8d-4c8c-8593-03e4c907000a",
-          notifyButton: {
-            enable: true,
-            size: 'medium',
-            theme: 'default',
-            position: 'bottom-right',
-            offset: {
-              bottom: '20px',
-              right: '20px'
-            },
-            showCredit: false,
-            text: {
-              'tip.state.unsubscribed': 'Subscribe to notifications',
-              'tip.state.subscribed': "You're subscribed to notifications",
-              'tip.state.blocked': "You've blocked notifications",
-              'message.prenotify': 'Click to subscribe to notifications',
-              'message.action.subscribed': "Thanks for subscribing!",
-              'message.action.resubscribed': "You're subscribed to notifications",
-              'message.action.unsubscribed': "You won't receive notifications again",
-              'dialog.main.title': 'Manage Site Notifications',
-              'dialog.main.button.subscribe': 'SUBSCRIBE',
-              'dialog.main.button.unsubscribe': 'UNSUBSCRIBE',
-              'dialog.blocked.title': 'Unblock Notifications',
-              'dialog.blocked.message': "Follow these instructions to allow notifications:"
-            },
-            colors: {
-              'circle.background': 'rgb(0, 123, 255)',
-              'circle.foreground': 'white',
-              'badge.background': 'rgb(0, 123, 255)',
-              'badge.foreground': 'white',
-              'badge.bordercolor': 'white',
-              'pulse.color': 'white',
-              'dialog.button.background.hovering': 'rgb(0, 104, 217)',
-              'dialog.button.background.active': 'rgb(0, 86, 173)',
-              'dialog.button.background': 'rgb(0, 123, 255)',
-              'dialog.button.foreground': 'white'
-            },
-            displayPredicate: function () {
-              return OneSignal.isPushNotificationsEnabled()
-                .then(function (isPushEnabled) {
-                  return !isPushEnabled;
-                });
-            }
+  <button class="button-patch" id="patch" onclick="openCard('patch-card')">V.1.0.3</button>
+  <div class="card" id="patch-card">
+    <header>
+      <h2><span class="icon">🛠️</span>Patches de Atualização</h2>
+      <button class="close-btn" onclick="closeCard()">&times;</button>
+    </header>
+    <p>Aqui você pode acompanhar as últimas atualizações e melhorias do sistema.</p>
+
+    <div class="patch-list" style="font-size: 16px;">
+      <ul>
+        <li>Atualização 1.0.1 30/12/2024 - Personalização para o Ano Novo e Otimização de Desempenho</li>
+        <li>Atualização 1.0.2 30/01/2025 - Personalização de Carnaval e Otimização de Desempenho</li>
+        <li>Atualização 1.0.3 14/02/2025 - Botão de ramais</li>
+
+
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+      await OneSignal.init({
+        appId: "9e585ea7-1a5c-40b6-94b2-a023b57fd61c",
+        safari_web_id: "web.onesignal.auto.0e731bf1-0f8d-4c8c-8593-03e4c907000a",
+        notifyButton: {
+          enable: true,
+          size: 'medium',
+          theme: 'default',
+          position: 'bottom-right',
+          offset: {
+            bottom: '20px',
+            right: '20px'
+          },
+          showCredit: false,
+          text: {
+            'tip.state.unsubscribed': 'Subscribe to notifications',
+            'tip.state.subscribed': "You're subscribed to notifications",
+            'tip.state.blocked': "You've blocked notifications",
+            'message.prenotify': 'Click to subscribe to notifications',
+            'message.action.subscribed': "Thanks for subscribing!",
+            'message.action.resubscribed': "You're subscribed to notifications",
+            'message.action.unsubscribed': "You won't receive notifications again",
+            'dialog.main.title': 'Manage Site Notifications',
+            'dialog.main.button.subscribe': 'SUBSCRIBE',
+            'dialog.main.button.unsubscribe': 'UNSUBSCRIBE',
+            'dialog.blocked.title': 'Unblock Notifications',
+            'dialog.blocked.message': "Follow these instructions to allow notifications:"
+          },
+          colors: {
+            'circle.background': 'rgb(0, 123, 255)',
+            'circle.foreground': 'white',
+            'badge.background': 'rgb(0, 123, 255)',
+            'badge.foreground': 'white',
+            'badge.bordercolor': 'white',
+            'pulse.color': 'white',
+            'dialog.button.background.hovering': 'rgb(0, 104, 217)',
+            'dialog.button.background.active': 'rgb(0, 86, 173)',
+            'dialog.button.background': 'rgb(0, 123, 255)',
+            'dialog.button.foreground': 'white'
+          },
+          displayPredicate: function () {
+            return OneSignal.isPushNotificationsEnabled()
+              .then(function (isPushEnabled) {
+                return !isPushEnabled;
+              });
           }
-        });
+        }
       });
-    </script>
+    });
+  </script>
 </body>
 
 </html>
