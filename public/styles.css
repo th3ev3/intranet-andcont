@@ -29,7 +29,7 @@ body {
   border-radius: 30px;
   border: none;
   font-size: 1.5vw;
-  color: #C4902A;
+  color: #e9b013;
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
@@ -37,7 +37,7 @@ body {
   transition: 0.25s ease;
   border-width: 2px;
   border-style: solid;
-  border-color: #C4902A;
+  border-color: #e9b013;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
@@ -114,7 +114,7 @@ img {
 }
 
 .custom-alert-content {
-  background-color: white;
+  background-color:#e9b013;
   padding: 20px;
   margin: 15% auto;
   width: 300px;
@@ -132,7 +132,7 @@ img {
 }
 
 .custom-alert-close:hover {
-  color: #8c402c;
+  color: #e9b013;
 }
 
 .overlay {
@@ -181,7 +181,7 @@ img {
 
 .card header h2 {
   font-size: 26px;
-  color: #8c402c;
+  color: #e9b013;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -190,7 +190,7 @@ img {
 .card header h2 .icon {
   margin-right: 10px;
   font-size: 28px;
-  color: #663399;
+  color: #e9b013;
 }
 
 .close-btn {
@@ -203,7 +203,7 @@ img {
 }
 
 .close-btn:hover {
-  color: #C4902A;
+  color: #e9b013;
   transform: scale(1.2);
 }
 
@@ -220,7 +220,7 @@ img {
 
 .historico-section h3 {
   font-size: 15px;
-  color: #8c402c;
+  color: #e9b013;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -248,7 +248,7 @@ img {
 
 .historico-section ul li a {
   text-decoration: none;
-  color: #8c402c;
+  color: #e9b013;
   font-weight: 600;
   flex: 1;
 }
@@ -259,17 +259,17 @@ img {
 
 @keyframes subtle-pulse {
   0% {
-    box-shadow: #8c402c;
+    box-shadow: #117c13;
     transform: scale(1);
   }
 
   50% {
-    box-shadow: 0 0 10px 3px #8c402c;
+    box-shadow: 0 0 10px 3px #117c13;
     transform: scale(1.02);
   }
 
   100% {
-    box-shadow: #8c402c;
+    box-shadow: #117c13;
     transform: scale(1);
   }
 }
@@ -283,7 +283,7 @@ img {
 }
 
 .navigation button {
-  background: linear-gradient(145deg, #8c402c, #8c402c);
+  background: linear-gradient(145deg, #993100, #ca4305);
   color: white;
   border: none;
   padding: 12px 25px;
@@ -298,7 +298,7 @@ img {
 }
 
 .navigation button:hover {
-  background: linear-gradient(145deg, #552b20, #8c402c);
+  background: linear-gradient(145deg, #993100, rgb(243, 84, 5));
   transform: translateY(-3px);
 }
 
@@ -318,7 +318,7 @@ img {
   width: 80%;
   max-width: 400px;
   padding: 12px 18px;
-  border: 2px solid #8c402c;
+  border: 2px solid #e9b013;
   border-radius: 30px;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -326,7 +326,7 @@ img {
 
 .search-container input:focus {
   outline: none;
-  border-color: #663399;
+  border-color: #e9b013;
   box-shadow: 0 0 8px rgba(146, 29, 29, 0.3);
 }
 
@@ -335,7 +335,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(145deg, #8c402c, #8c402c);
+  background: linear-gradient(145deg, #993100, rgb(243, 84, 5));
   border-radius: 6px;
 }
 
@@ -374,7 +374,7 @@ img {
 }
 
 .popup-btn {
-  background-color: #8c402c;
+  background-color: #e9b013;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -411,7 +411,7 @@ img {
   bottom: 10px;
   right: 10px;
     padding: 10px 20px;
-  background-color: #66291a;
+  background-color: #117c13;
   color: white;
   border: none;
   border-radius:10px;
@@ -422,17 +422,16 @@ img {
 }
 
 .button-patch:hover {
-  background-color: #8c402c;
+  background-color: #039c06;
 }
 
-/* Posicionamento do novo botão */
 #ramais {
   top: 1;
   left: 86%;
   width: 7vw;
 }
 
-/* Estilos para a lista de ramais */
+
 .directory-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -460,7 +459,7 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #8c402c, #8c402c 100%);
+  background: linear-gradient(145deg, #993100, rgb(243, 84, 5));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,7 +473,7 @@ img {
 
 .employee-name {
   font-size: 15px;
-  color: #6b2c1c;
+  color:#f7547f;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -496,7 +495,7 @@ img {
 
 
 .button-patch:hover {
-  transform: translateY(-2px); /* Elevação sutil no hover */
+  transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25),
-              0 3px 6px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+              0 3px 6px rgba(0, 0, 0, 0.15); 
 }
